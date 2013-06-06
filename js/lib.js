@@ -93,7 +93,7 @@ $(window).load(function() {
           $submenu.find('li').first().find('a').click();
         }
         var topOffset = $('#' + page).position().top;
-        $('body').animate({'scrollTop': topOffset - 90}, 500);
+        $('html, body').animate({'scrollTop': topOffset - 90}, 500);
       }
       $(this).closest('.menu').find('li').removeClass('active');
       $(this).closest('li').addClass('active');
@@ -105,6 +105,6 @@ $(window).load(function() {
     function() {
       $('.main-menu li').removeClass('active');
       $('div.sub-menu ul').hide();
-      $('body').animate({'scrollTop': 0}, 500);
+      $('html, body').animate({'scrollTop': 0}, 500);
     })
 })
