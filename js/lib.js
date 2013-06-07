@@ -117,6 +117,7 @@ $(window).load(function() {
       if($wrapper.hasClass('closed')) {
         $wrapper.animate({'height': $wrapper.data('height')}, 500, $.proxy(
           function() {
+            this.css('height', 'auto');
             this.removeClass('closed');
             this.find('video').get(0).play();
           }, $wrapper)

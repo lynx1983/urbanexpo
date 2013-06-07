@@ -97,7 +97,7 @@ header.fixed {
 
 header .header {
     height: 44px;
-    border-bottom: 1px solid #CA2228;
+    border-bottom: 1px solid #EB1C24;
 }
 
 header .wrapper {
@@ -134,7 +134,7 @@ ul.main-menu li {
 }
 ul.main-menu li:hover,
 ul.main-menu li.active {
-    border-bottom: 5px solid #CA2228;
+    border-bottom: 5px solid #EB1C24;
 }
 
 ul.main-menu li a {
@@ -146,7 +146,7 @@ ul.main-menu li a {
 }
 
 ul.main-menu li.active a {
-    color: #CA2228;
+    color: #EB1C24;
 }
 
 div.sub-menu {
@@ -183,7 +183,7 @@ ul.sub-menu li a {
 }
 
 ul.sub-menu li.active a {
-    color: #CA2228;
+    color: #EB1C24;
 }
 
 header.fixed + #content {
@@ -238,12 +238,12 @@ div.item .footer .timestamp span {
 
 div.item .footer .links {
     margin-left: 50%;
-    border-left: 1px solid #CA2228;
+    border-left: 1px solid #EB1C24;
     padding: 0 20px;
 }
 
 div.item .footer .links .more {
-    color: #CA2228;
+    color: #EB1C24;
     text-decoration: none;
     line-height: 27px;
 }
@@ -263,7 +263,7 @@ div.item .footer .links .more:hover {
 
 #news div.item .content .heading {
     padding-bottom: 15px;
-    border-bottom: 1px solid #CA2228;
+    border-bottom: 1px solid #EB1C24;
 }
 
 #news div.item .content .heading h2 {
@@ -305,7 +305,7 @@ div.item .footer .links .more:hover {
 
 #portfolio div.item .content .teaser {
     margin-left: 50%;
-    border-left: 1px solid #CA2228;
+    border-left: 1px solid #EB1C24;
     margin-top: 5px;
 }
 
@@ -320,12 +320,12 @@ div.item .footer .links .more:hover {
 
 #service div.item .content .teaser {
     margin-left: 50%;
-    border-left: 1px solid #CA2228;
+    border-left: 1px solid #EB1C24;
     margin-top: 5px;
 }
 
 #about .video-wrapper {
-    height: 540px;
+    max-height: 540px;
     overflow: hidden;
     margin-bottom: 40px;
     position: relative;
@@ -359,16 +359,16 @@ article {
 }
 
 article .header {
-    border-bottom: 1px solid #CA2228;
+    border-bottom: 1px solid #EB1C24;
     padding: 0 170px;
 }
 
 article .header h2 {
     font-size: 2.7em;
-    color: #CA2228;
+    color: #EB1C24;
     display: inline-block;
     padding-bottom: 5px;
-    border-bottom: 5px solid #CA2228;
+    border-bottom: 5px solid #EB1C24;
 }
 
 article > .content {
@@ -394,7 +394,7 @@ section .header {
 }
 
 section.active .header {
-    border-bottom: 1px solid #CA2228;
+    border-bottom: 1px solid #EB1C24;
 }
 
 section .header h2 {
@@ -406,8 +406,8 @@ section .header h2 {
 }
 
 section.active .header h2 {
-    color: #CA2228;
-    border-bottom: 5px solid #CA2228;
+    color: #EB1C24;
+    border-bottom: 5px solid #EB1C24;
 }
 
 section .content {
@@ -420,7 +420,7 @@ section .content {
 }
 
 .tabs-wrapper ul.tabs {
-    border-bottom: 1px solid #CA2228;
+    border-bottom: 1px solid #EB1C24;
     padding: 0 170px;
 }
 
@@ -431,7 +431,7 @@ section .content {
 }
 
 .tabs-wrapper ul.tabs li.active {
-    border-bottom: 5px solid #CA2228;
+    border-bottom: 5px solid #EB1C24;
 }
 
 .tabs-wrapper ul.tabs li a {
@@ -441,7 +441,7 @@ section .content {
 }
 
 .tabs-wrapper ul.tabs li.active a {
-    color: #CA2228;
+    color: #EB1C24;
     font-size: 2em;
 }
 
