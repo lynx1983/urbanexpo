@@ -66,6 +66,14 @@ html, body, a {
     font-size: 14px;
 }
 
+a, a:visited, a:active, a:link {
+
+}
+
+a:hover {
+
+}
+
 html {
     width: 100%;
     height: 100%;
@@ -132,7 +140,7 @@ ul.main-menu li.active {
 ul.main-menu li a {
     display: inline-block;
     margin-top: 15px;
-    font-size: 1.14em;
+    font-size: 1.15em;
     text-decoration: none;
     color: #272425;
 }
@@ -316,6 +324,35 @@ div.item .footer .links .more:hover {
     margin-top: 5px;
 }
 
+#about .video-wrapper {
+    height: 540px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#about video {
+    width: 100%;
+}
+
+#about .video-wrapper.closed {
+    height: 100px;
+}
+
+#about .video-wrapper .close {
+    position: absolute;
+    bottom: 0;
+    width: 46px;
+    height: 24px;
+    left: 170px;
+    background: #FFFFFF url('../img/slideup-bg.png') no-repeat 50% 5px;
+    cursor: pointer;    
+}
+
+#about .video-wrapper.closed .close {
+    background: #FFFFFF url('../img/slidedown-bg.png') no-repeat 50% 5px;
+}
+
 article {
     position: relative;
     padding-bottom: 50px;
@@ -345,6 +382,77 @@ article > .content p {
 
 article .item {
     margin: 0 0 0 170px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section .header {
+    padding: 0 170px;
+    border-bottom: 1px solid #ADADAD;
+}
+
+section.active .header {
+    border-bottom: 1px solid #CA2228;
+}
+
+section .header h2 {
+    font-size: 2.7em;
+    color: #000000;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 5px solid transparent;
+}
+
+section.active .header h2 {
+    color: #CA2228;
+    border-bottom: 5px solid #CA2228;
+}
+
+section .content {
+    padding: 30px 170px 30px;
+    display: none;
+}
+
+.tabs-wrapper {
+    margin-bottom: 40px;
+}
+
+.tabs-wrapper ul.tabs {
+    border-bottom: 1px solid #CA2228;
+    padding: 0 170px;
+}
+
+.tabs-wrapper ul.tabs li {
+    display: inline-block;
+    line-height: 3em;
+    margin-right: 40px;
+}
+
+.tabs-wrapper ul.tabs li.active {
+    border-bottom: 5px solid #CA2228;
+}
+
+.tabs-wrapper ul.tabs li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.15em;
+}
+
+.tabs-wrapper ul.tabs li.active a {
+    color: #CA2228;
+    font-size: 2em;
+}
+
+.tabs-wrapper .tab {
+    display: none;
+    padding: 20px 170px;
+    line-height: 1.6em;
+}
+
+.tabs-wrapper .tab p {
+    line-height: 1.6em;   
 }
 
 @media screen and (max-width: 800px) {

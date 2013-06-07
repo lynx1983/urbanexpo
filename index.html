@@ -22,8 +22,8 @@
 						<li><a href="#" class="page" data-page="tech">Технологии</a></li>
 						<li><a href="#" class="page" data-page="portfolio">Портфолио</a></li>
 						<li><a href="#" class="page" data-page="service">Услуги</a></li>
-						<li><a href="#" class="page">О компании</a></li>
-						<li><a href="#" class="page">Контакты</a></li>
+						<li><a href="#" class="page" data-page="about" data-default=true>О компании</a></li>
+						<li><a href="#" class="page" data-page="contacts">Контакты</a></li>
 					</ul>
 				</div>
 			</div>
@@ -45,6 +45,56 @@
 		</div>
 	</header>
 	<div id="content">
+		<div id="about" class="page wrapper clearfix">
+			<div class="video-wrapper">
+				<div class="close"></div>
+				<video autoplay=true loop=true muted=true>
+					<source src="video/sample.mp4" type="video/mp4"/> 
+				</video>
+			</div>
+			<div class="tabs-wrapper">
+				<ul class="tabs">
+					<li class="active"><a href="#" data-tab="about">О компании</a></li>
+					<li><a href="#" data-tab="team">Команда</a></li>
+					<li><a href="#" data-tab="vacancies">Вакансии</a></li>
+				</ul>
+				<div class="tab" data-tab="about" style="display:block;">
+					<p>Компания Урбан Групп основана в 2005 году как агентство корпоративного маркетинга. В 2006 вышло на рынок с услугами Брендинга и айдентики, а также общедизайнерских услуг. С 2007 года, агентство дополнил отдел по проведению BTL и Event. С 2011 функционирует как агентство полного цикла с дополнительными направлениями SMM и SMO услуг.</p>
+				</div>
+				<div class="tab" data-tab="team">
+					Team tab
+				</div>
+				<div class="tab" data-tab="vacancies">
+					Vacancies tab
+				</div>
+			</div>
+			<div class="sections">
+				<section>
+					<div class="header">
+						<a href="#"><h2>Решения в области брендинга</h2></a>
+					</div>
+					<div class="content">
+						Content
+					</div>
+				</section>
+				<section>
+					<div class="header">
+						<a href="#"><h2>Организация EVENT-мероприятий</h2></a>
+					</div>
+					<div class="content">
+						Content
+					</div>
+				</section>
+				<section>
+					<div class="header">
+						<a href="#"><h2>Коммуникация со СМИ (media relations)</h2></a>
+					</div>
+					<div class="content">
+						Content
+					</div>
+				</section>
+			</div>
+		</div>
 		<div id="news" class="page wrapper clearfix">
 			<div class="item">
 				<img class="item-image" src="img/test-1.jpg"/>
@@ -223,6 +273,8 @@
 				</div>
 			</div>
 		</div>
+		<div id="tech" class="page wrapper clearfix">-
+		</div>
 		<div id="portfolio" class="page wrapper clearfix">
 			<div class="item branding">
 				<img class="item-image" src="img/test-1.jpg"/>
@@ -378,6 +430,8 @@
 					</div> 
 				</div>
 			</article>
+		</div>
+		<div id="contacts" class="page wrapper clearfix">
 		</div>
 	</div>
 </body>
