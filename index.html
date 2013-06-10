@@ -7,7 +7,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.isotope.js"></script>
+	<script type="text/javascript" src="js/bootstrap-scrollspy.js"></script>
 	<script type="text/javascript" src="js/lib.js"></script>
+	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
 </head>
 <body>
 	<header class="fixed">
@@ -17,13 +19,13 @@
 					<a id="logo" href="#"><img src="img/logo.png"/></a>
 				</div>
 				<div class="main-menu">
-					<ul class="menu main-menu">
-						<li><a href="#" class="page" data-page="news">Новости</a></li>
-						<li><a href="#" class="page" data-page="tech">Технологии</a></li>
-						<li><a href="#" class="page" data-page="portfolio">Портфолио</a></li>
-						<li><a href="#" class="page" data-page="service">Услуги</a></li>
-						<li><a href="#" class="page" data-page="about" data-default=true>О компании</a></li>
-						<li><a href="#" class="page" data-page="contacts">Контакты</a></li>
+					<ul class="menu main-menu nav">
+						<li><a href="#news" class="page" data-page="news">Новости</a></li>
+						<li><a href="#tech" class="page" data-page="tech">Технологии</a></li>
+						<li><a href="#portfolio" class="page" data-page="portfolio">Портфолио</a></li>
+						<li><a href="#service" class="page" data-page="service">Услуги</a></li>
+						<li><a href="#about" class="page" data-page="about" data-default=true>О компании</a></li>
+						<li><a href="#contacts" class="page" data-page="contacts">Контакты</a></li>
 					</ul>
 				</div>
 			</div>
@@ -62,7 +64,28 @@
 					<p>Компания Урбан Групп основана в 2005 году как агентство корпоративного маркетинга. В 2006 вышло на рынок с услугами Брендинга и айдентики, а также общедизайнерских услуг. С 2007 года, агентство дополнил отдел по проведению BTL и Event. С 2011 функционирует как агентство полного цикла с дополнительными направлениями SMM и SMO услуг.</p>
 				</div>
 				<div class="tab" data-tab="team">
-					Team tab
+					<div class="person-card">
+						<div class="foto-wrapper">
+							<img src="img/person-1.jpg"/>
+						</div>
+						<div class="person-details clearfix">
+							<h3>Елизавета<br/>Александра Мария</h3>
+							<p class="state">PR директор</p>
+							<p class="details">Компания Урбан Групп основана в 2005 году как агентство корпоративного маркетинга. В 2006 вышло на рынок с услугами Брендинга и айдентики, а также общедизайнерских услуг. С 2007 года, агентство дополнил отдел по проведению BTL и Event. С 2011 функционирует как агентство полного цикла с дополнительными направлениями SMM и SMO услуг.</p>
+						</div>
+					</div>
+					<ul class="persons">
+						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+					</ul>
 				</div>
 				<div class="tab" data-tab="vacancies">
 					Vacancies tab
@@ -369,8 +392,10 @@
 		</div>
 		<div id="service" class="page wrapper clearfix">
 			<article class="clearfix">
-				<div class="header">
-					<h2>Бренд</h2>
+				<div class="header clearfix">
+					<div class="header-wrapper">
+						<h2>Бренд</h2>
+					</div>
 				</div>
 				<div class="content">
 					<p>(англ. brand, [brænd] — товарный знак, торговая марка, клеймо) — термин в маркетинге, символизирующий комплекс информации о компании, продукте или услуге; популярная, легко узнаваемая и юридически защищённая символика какого-либо производителя или продукта.</p>
@@ -400,8 +425,10 @@
 				</div>
 			</article>
 			<article class="clearfix">
-				<div class="header">
-					<h2>Айдентика</h2>
+				<div class="header clearfix">
+					<div class="header-wrapper">
+						<h2>Айдентика</h2>
+					</div>
 				</div>
 				<div class="content">
 					<p>Бренд — единое обозначение (название, символ, лозунг, слоган, девиз, стиль, термин, идея, математическая модель), узнаваемое потребителем концептуально выработанного набора товаров и услуг, обычно объединённых в направлении деятельности компании или объединения (для экономической и стратегической целесообразности), которым принадлежит.</p>
@@ -432,6 +459,64 @@
 			</article>
 		</div>
 		<div id="contacts" class="page wrapper clearfix">
+			<div class="wrapper">
+				<div class="header">
+					<div class="header-wrapper">
+						<h2>Контакты</h2>
+					</div>
+				</div>
+				<div class="content">
+					<p>+7 (495) 971-83-85</p>
+					<p>&nbsp;</p>
+					<p><a href="#">info@art-urban.ru</a></p>
+					<p>&nbsp;</p>
+					<p>127051, Москва,<br/>Трубная, 32, корп. 3</p>
+					<a href="#" id="show-map">Посмотреть карту</a>
+					<a href="#" id="show-contacts">Контакты</a>
+				</div>
+				<div class="header">
+					<div class="header-wrapper">
+						<h2>Обратная связь</h2>
+					</div>
+				</div>
+				<div class="content">
+					<form>
+						<div class="row clearfix">
+							<label class="required">Тема сообщения</label>
+							<input type="text" name="subject" />
+						</div>
+						<div class="row clearfix">
+							<div class="col3">
+								<label class="required">Имя</label>
+								<input type="text" name="name" />
+							</div>
+							<div class="col3">
+								<label>Компания</label>
+								<input type="text" name="company" />
+							</div>
+							<div class="col3">
+								<label>Должность</label>
+								<input type="text" name="state" />
+							</div>
+						</div>
+						<div class="row clearfix">
+							<div class="col2">
+								<label class="required">E-mail</label>
+								<input type="text" name="email" />
+							</div>
+							<div class="col2">
+								<label>Телефон</label>
+								<input type="text" name="phone" />
+							</div>
+						</div>
+						<div class="row clearfix">
+							<label class="required">Сообщение</label>
+							<textarea name="body"></textarea>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="map"></div>
 		</div>
 	</div>
 </body>
