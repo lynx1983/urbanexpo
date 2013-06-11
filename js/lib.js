@@ -98,33 +98,22 @@ $(window).load(function() {
   $('a.page').click(
     function() {
       var page = $(this).data('page');
-      var haveSubMenu = false;
-      $('ul.sub-menu', 'div.sub-menu').hide();
-      $('div.sub-menu').hide();
+      /*$('ul.sub-menu', 'div.sub-menu').hide();
+      $('div.sub-menu').hide();*/
       if(page) {
         var $submenu = $('ul.sub-menu.' + page, 'div.sub-menu');
-        if($submenu.length) {
-          haveSubMenu = true;
-          $('div.sub-menu').show();
-          $submenu.slideDown();
-          $submenu.find('li').first().find('a').click();
-        }
         var topOffset = $('#' + page).position().top;
         $('body').scrollspy('disable');
-        console.log('animate disable')
-        $('html, body').animate({'scrollTop': topOffset - (haveSubMenu ? 90 : 45)}, 
+        $('html, body').animate({'scrollTop': topOffset - ($submenu.length ? 90 : 45)}, 
           {
             duration: 500, 
             complete: function() {
-              console.log('animate complete')
               $('body').scrollspy('enable');
               $('body').scrollspy('process');
             }
           }
         );
       }
-      $(this).closest('.menu').find('li').removeClass('active');
-      $(this).closest('li').addClass('active');
       return false;
     }
   );
@@ -170,7 +159,7 @@ $(window).load(function() {
         $wrapper.animate({'height': 100}, 500, $.proxy(
           function() {
             this.addClass('closed');
-            $('body').scrollspy('refresh');
+            $('body').scrollspy('refresh'); 
           }, $wrapper)
         );
       }
@@ -220,22 +209,19 @@ $(window).load(function() {
       $('html, body').animate({'scrollTop': 0}, 500);
     });
 
+  documentHeight = $(document).height();
+
   $('body').scrollspy({
     target: 'div.main-menu',
     offset: 95
   });
 
-  $('.main-menu a[data-default=true]').click();  
-
-  documentHeight = $(document).height();
-
   $(document).bind('DOMSubtreeModified', function() {
     if($(this).height() != documentHeight) {
-      console.log('modify, prev: ' + documentHeight + ', current: ' + $(this).height());
       setTimeout(function() {
         $('body').scrollspy('refresh');
       }, 500);
       documentHeight = $(this).height();
     }
-  });
+  });  
 })
