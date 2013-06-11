@@ -152,6 +152,7 @@ ul.main-menu li.active a {
 }
 
 div.sub-menu {
+    display: none;
     border-bottom: 1px solid #DEDFE0;
     text-align: center;
     background: #f0f1f1;
@@ -199,7 +200,6 @@ header.fixed + #content {
 
 div.page {
     display: block;
-    min-height: 1000px;
     margin-bottom: 200px !important;
 }
 
@@ -312,7 +312,7 @@ div.item .footer .links .more:hover {
 }
 
 #service article:first-child {
-    margin-top: 60px;
+    padding-top: 30px;
 }
 
 #service div.item {
@@ -556,7 +556,6 @@ li.person:hover .mask {
 
 #contacts {
     height: auto;
-    min-height: 0;
     overflow: hidden;
     position: relative;
 }
@@ -569,8 +568,9 @@ li.person:hover .mask {
     margin-left: 345px;
 }
 
-#contacts .header:first-child {
+#contacts .inner {
     margin-top: 90px;
+    margin-bottom: 90px;
 }
 
 #contacts .header h2 {
@@ -680,6 +680,7 @@ li.person:hover .mask {
     top: 0;
     left: 80%;
     border-left: 1px solid #C1C1BE;
+    border-top: 1px solid #C1C1BE;
 }
 
 #show-map {
