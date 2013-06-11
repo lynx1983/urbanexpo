@@ -31,6 +31,7 @@
       , $element = $(element).is('body') ? $(window) : $(element)
       , href
     this.options = $.extend({}, $.fn.scrollspy.defaults, options)
+    this.enabled = true;
     this.$scrollElement = $element.on('scroll.scroll-spy.data-api', process)
     this.selector = (this.options.target
       || ((href = $(element).attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) //strip for ie7
@@ -77,6 +78,8 @@
           , activeTarget = this.activeTarget
           , i
 
+        if(!this.enabled) return;
+
         if (scrollTop >= maxScroll) {
           return activeTarget != (i = targets.last()[0])
             && this.activate ( i )
@@ -89,6 +92,14 @@
             && this.activate( targets[i] )
         }
       }
+
+    , enable: function() {
+      this.enabled = true;
+    }
+
+    ,disable: function() {
+      this.enabled = false;
+    }
 
     , activate: function (target) {
         var active
