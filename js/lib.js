@@ -79,6 +79,12 @@ $(window).load(function() {
     zoom: 7
   });
 
+  map.controls
+    .add('zoomControl')
+    .add('typeSelector')
+    .add('mapTools')
+    .add('trafficControl');
+
   $portfolio = $('#portfolio .isotope-wrapper');
   $news = $('#news .isotope-wrapper');
   $equipment = $('div.equipment');
