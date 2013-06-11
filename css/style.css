@@ -102,7 +102,7 @@ table {
 
 header {
     width: 100%;
-    z-index: 10;
+    z-index: 5;
 }
 
 header.fixed {
@@ -801,6 +801,79 @@ li.person:hover .mask {
 
 #tech div.equipment div.item span.count:before {
     content: "x";
+}
+
+#overlay {
+    z-index: 10;
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .7);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 45px;
+    padding-bottom: 100px;
+}
+
+#overlay .wrapper {
+    width: 65%;
+    margin: 0 auto;
+    background: #FFFFFF;
+    position: relative;
+}
+
+#overlay .close {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background: transparent url('../img/close-bg.png') no-repeat;
+    cursor: pointer;
+    top: 25px;
+    right: 25px;
+}
+
+#overlay img {
+    width: 100%;
+}
+
+div.paragraph {
+    padding: 30px 50px 50px;
+}
+
+div.paragraph h3 {
+    font-family: FreeSetCBold;
+    font-size: 1.7em;
+    line-height: 1.2em;
+    color: #EB1C24;
+    font-weight: bold;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 10px;
+}
+
+div.paragraph .timestamp {
+    margin-bottom: 30px;
+}
+
+div.paragraph .timestamp span {
+    font-size: 0.85em;
+}
+
+div.paragraph .columns2 {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+
+div.paragraph p {
+    line-height: 1.4em;
+}
+
+#overlay .footer {
+    padding: 35px;
 }
 
 @media screen and (max-width: 800px) {

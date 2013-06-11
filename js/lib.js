@@ -61,6 +61,16 @@ var $news;
 var $equipment;
 var documentHeight;
 
+function showOverlay() {
+  $('body').css('overflow', 'hidden');
+  $('#overlay').show();
+}
+
+function hideOverlay() {
+  $('#overlay').hide();
+  $('body').css('overflow', '');
+}
+
 $(window).load(function() {
   $('#contacts').height($('#contacts .inner').outerHeight(true));
 
@@ -118,7 +128,7 @@ $(window).load(function() {
           }
         );
       }
-      return false;
+      return true;
     }
   );
 
@@ -210,14 +220,34 @@ $(window).load(function() {
       $('#show-map').show();
       return false;
     }
-  )
+  );
 
   $('#logo').click(
     function() {
       $('.main-menu li').removeClass('active');
       $('div.sub-menu ul').hide();
       $('html, body').animate({'scrollTop': 0}, 500);
-    });
+    }
+  );
+
+  $('#overlay').click(
+    function() {
+      hideOverlay();
+    }
+  );
+
+  $('#overlay .wrapper').click(
+    function() {
+      return false;
+    }
+  );
+
+  $('#overlay .close').click(
+    function() {
+      hideOverlay();
+      return false;
+    }
+  );
 
   documentHeight = $(document).height();
 
@@ -225,6 +255,14 @@ $(window).load(function() {
     target: 'div.main-menu',
     offset: 95
   });
+
+  $('#news .item .more').click(
+    function() {
+      $('#overlay .wrapper > .content').html($('#news-detail').html());
+      showOverlay();
+      return false;
+    }
+  );
 
   $(document).bind('DOMSubtreeModified', function() {
     if($(this).height() != documentHeight) {
