@@ -881,8 +881,35 @@ div.paragraph p {
     line-height: 1.4em;
 }
 
+div.paragraph p.quote {
+    font-family: FreeSetCItalic;
+    color: #A5A6A9;
+}
+
 #overlay .footer {
     padding: 35px;
+}
+
+#overlay .tabs-wrapper ul.tabs {
+    padding: 20px 0;
+    border: none;
+}
+
+#overlay .tabs-wrapper ul.tabs li {
+    line-height: 1em;
+    margin-right: 20px;
+}
+
+#overlay .tabs-wrapper ul.tabs li {
+    border: none;
+}
+
+#overlay .tabs-wrapper ul.tabs li a {
+    font-size: 1em;
+}
+
+#overlay .tabs-wrapper div.tab {
+    padding: 0;
 }
 
 @media screen and (max-width: 800px) {

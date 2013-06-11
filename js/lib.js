@@ -258,7 +258,15 @@ $(window).load(function() {
 
   $('#news .item .more').click(
     function() {
-      $('#overlay .wrapper > .content').html($('#news-detail').html());
+      $('#overlay .wrapper > .content').html($('#news-detail').children().clone());
+      showOverlay();
+      return false;
+    }
+  );
+
+  $('#portfolio .item .more').click(
+    function() {
+      $('#overlay .wrapper > .content').html($('#portfolio-detail').children().clone(true));
       showOverlay();
       return false;
     }
