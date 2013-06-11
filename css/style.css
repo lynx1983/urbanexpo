@@ -7,6 +7,15 @@
          url('../fonts/freesetc.svg#FreeSetCRegular') format('svg');
 }
 
+@font-face {
+    font-family: 'FreeSetCBold';
+    src: url('../fonts/freesetc-bold.eot');
+    src: url('../fonts/freesetc-bold.eot') format('embedded-opentype'),
+         url('../fonts/freesetc-bold.woff') format('woff'),
+         url('../fonts/freesetc-bold.ttf') format('truetype'),
+         url('../fonts/freesetc-bold.svg#FreeSetCBold') format('svg');
+}
+
 /* Start: Recommended Isotope styles */
 
 /**** Isotope Filtering ****/
