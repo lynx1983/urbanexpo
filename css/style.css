@@ -197,13 +197,17 @@ header.fixed + #content {
     padding-top: 45px;
 }
 
-#content .wrapper {
+#content .isotope-wrapper {
     margin: 0 auto;
 }
 
 div.page {
     display: block;
-    margin-bottom: 200px !important;
+    margin-bottom: 200px;
+}
+
+div.page:last-child {
+    margin-bottom: 0;
 }
 
 div.item {
@@ -746,30 +750,46 @@ li.person:hover .mask {
     padding: 25px 0 40px;
 }
 
+#tech .equipment-wrapper {
+    margin-left: 160px;
+    margin-right: 160px;
+    padding: 25px 0 40px;
+}
+
 #tech .content p,
 #contacts .content p {
     line-height: 1.6em;
     margin-bottom: .6em;
 }
 
-#tech table.equipment td {
-    text-align: center;
-    padding-left: 30px;
-    padding-bottom: 30px;
+#tech div.equipment {
+    margin: 0 auto;
 }
 
-#tech table.equipment td p {
+#tech div.equipment div.item {
+    text-align: center;
+    margin: 15px;
+    box-shadow: none;
+    width: 320px;
+}
+
+#tech div.equipment div.item img {
+    max-width: 300px;
+}
+
+#tech div.equipment div.item p {
     text-align: left;
     line-height: 1em;
+    padding-right: 10px;
 }
 
-#tech table.equipment td span.count {
+#tech div.equipment div.item span.count {
     float: right;
     font-size: 3.8em;
     line-height: 1em;
 }
 
-#tech table.equipment td span.count:before {
+#tech div.equipment div.item span.count:before {
     content: "x";
 }
 

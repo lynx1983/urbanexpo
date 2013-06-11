@@ -58,6 +58,7 @@ $.Isotope.prototype._getCenteredMasonryColumns = function() {
 
 var $portfolio;
 var $news;
+var $equipment;
 var documentHeight;
 
 $(window).load(function() {
@@ -68,8 +69,9 @@ $(window).load(function() {
     zoom: 7
   });
 
-  $portfolio = $('#portfolio');
-  $news = $('#news');
+  $portfolio = $('#portfolio .isotope-wrapper');
+  $news = $('#news .isotope-wrapper');
+  $equipment = $('div.equipment');
 	
   $portfolio.isotope({
 		itemSelector : '.item',
@@ -79,9 +81,13 @@ $(window).load(function() {
     itemSelector : '.item',
   });
 
+  $equipment.isotope({
+    itemSelector : '.item',
+  });
+
   $('a.filter').click(
     function() {
-      $('#' + $(this).data("filterPage")).isotope({
+      $('#' + $(this).data("filterPage") + ' .isotope-wrapper').isotope({
         filter: $(this).data("filterValue")
       });
       $(this).closest('.menu').find('li').removeClass('active');
@@ -98,8 +104,6 @@ $(window).load(function() {
   $('a.page').click(
     function() {
       var page = $(this).data('page');
-      /*$('ul.sub-menu', 'div.sub-menu').hide();
-      $('div.sub-menu').hide();*/
       if(page) {
         var $submenu = $('ul.sub-menu.' + page, 'div.sub-menu');
         var topOffset = $('#' + page).position().top;
