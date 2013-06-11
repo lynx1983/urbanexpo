@@ -87,6 +87,10 @@ body {
     position: relative;
 }
 
+table {
+    width: 100%;
+}
+
 header {
     width: 100%;
     background: #FFFFFF;
@@ -659,10 +663,6 @@ li.person:hover .mask {
     height: 200px;
 }
 
-#contacts .content p {
-    line-height: 1.2em;
-}
-
 #contacts .wrapper {
     width: 80%;
     height: 100%;
@@ -709,7 +709,60 @@ li.person:hover .mask {
 
 #tech {
     background: url('../img/tech-bg.png') top center no-repeat;
-    padding-top: 440px;
+    padding-top: 480px;
+}
+
+#tech .header {
+    border-bottom: 1px solid #EB1C24;
+}
+
+#tech .header .header-wrapper {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+#tech .inner {
+}
+
+#tech .header h2 {
+    font-size: 2.7em;
+    color: #EB1C24;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 5px solid #EB1C24;
+}
+
+#tech .content {
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 25px 0 40px;
+}
+
+#tech .content p,
+#contacts .content p {
+    line-height: 1.6em;
+    margin-bottom: .6em;
+}
+
+#tech table.equipment td {
+    text-align: center;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+#tech table.equipment td p {
+    text-align: left;
+    line-height: 1em;
+}
+
+#tech table.equipment td span.count {
+    float: right;
+    font-size: 3.8em;
+    line-height: 1em;
+}
+
+#tech table.equipment td span.count:before {
+    content: "x";
 }
 
 @media screen and (max-width: 800px) {
