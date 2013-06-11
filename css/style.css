@@ -93,7 +93,6 @@ table {
 
 header {
     width: 100%;
-    background: #FFFFFF;
     z-index: 10;
 }
 
@@ -104,6 +103,7 @@ header.fixed {
 header .header {
     height: 44px;
     border-bottom: 1px solid #EB1C24;
+    background: #FFFFFF;
 }
 
 header .wrapper {
@@ -161,6 +161,7 @@ div.sub-menu {
     text-align: center;
     background: #f0f1f1;
     box-shadow: inset 0 4px 5px -2px rgba(0,0,0,0.3);
+    height: 40px;
 }
 
 div.sub-menu div.wrapper {

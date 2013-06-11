@@ -125,16 +125,19 @@ $(window).load(function() {
   $('.main-menu li').on('activate', function() {
     var $a = $(this).find('a');
     var page = $a.data('page');
-    $('ul.sub-menu', 'div.sub-menu').hide();
-    $('div.sub-menu').hide();
     if(page) {
       var $submenu = $('ul.sub-menu.' + page, 'div.sub-menu');
       if($submenu.length) {
-        $('div.sub-menu').show();
-        $submenu.slideDown();
+        $('div.sub-menu').slideDown();
+        if(!$submenu.is(':visible')) {
+          $('ul.sub-menu:visible').hide();
+          $submenu.fadeIn();
+        }
         if($submenu.find('.active').length == 0) {
           $submenu.find('li').eq(0).addClass('active');
         }
+      } else {
+        $('div.sub-menu').fadeOut();
       }
     }
   })
