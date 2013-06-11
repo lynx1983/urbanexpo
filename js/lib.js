@@ -188,13 +188,14 @@ $(window).load(function() {
 
   $('.tabs-wrapper .tabs a').click(
     function() {
+      if($(this).parent().hasClass('active')) return false;
       var $wrapper = $(this).closest('.tabs-wrapper');
       $wrapper.find('.tabs li').removeClass('active');
       var tab = $(this).data('tab');
       $(this).closest('li').addClass('active');
-      $wrapper.find('.tab:visible').fadeOut('fast', $.proxy(
+      $wrapper.find('.tab:visible').stop().fadeOut('fast', $.proxy(
         function(tab) {
-          this.find('.tab[data-tab=' + tab +']').fadeIn();    
+          this.find('.tab[data-tab=' + tab +']').stop().fadeIn();    
         }, $wrapper, tab)
       );
       
