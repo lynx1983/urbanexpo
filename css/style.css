@@ -16,6 +16,15 @@
          url('../fonts/freesetc-bold.svg#FreeSetCBold') format('svg');
 }
 
+@font-face {
+    font-family: 'FreeSetCItalic';
+    src: url('../fonts/freesetc-italic.eot');
+    src: url('../fonts/freesetc-italic.eot') format('embedded-opentype'),
+         url('../fonts/freesetc-italic.woff') format('woff'),
+         url('../fonts/freesetc-italic.ttf') format('truetype'),
+         url('../fonts/freesetc-italic.svg#FreeSetCItalic') format('svg');
+}
+
 /* Start: Recommended Isotope styles */
 
 /**** Isotope Filtering ****/
