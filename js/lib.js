@@ -110,7 +110,18 @@ $(window).load(function() {
           $submenu.find('li').first().find('a').click();
         }
         var topOffset = $('#' + page).position().top;
-        $('html, body').animate({'scrollTop': topOffset - (haveSubMenu ? 90 : 45)}, 500);
+        $('body').scrollspy('disable');
+        console.log('animate disable')
+        $('html, body').animate({'scrollTop': topOffset - (haveSubMenu ? 90 : 45)}, 
+          {
+            duration: 500, 
+            complete: function() {
+              console.log('animate complete')
+              $('body').scrollspy('enable');
+              $('body').scrollspy('process');
+            }
+          }
+        );
       }
       $(this).closest('.menu').find('li').removeClass('active');
       $(this).closest('li').addClass('active');
@@ -151,6 +162,7 @@ $(window).load(function() {
             this.css('height', 'auto');
             this.removeClass('closed');
             this.find('video').get(0).play();
+            $('body').scrollspy('refresh');
           }, $wrapper)
         );
       } else {
@@ -158,6 +170,7 @@ $(window).load(function() {
         $wrapper.animate({'height': 100}, 500, $.proxy(
           function() {
             this.addClass('closed');
+            $('body').scrollspy('refresh');
           }, $wrapper)
         );
       }
@@ -207,12 +220,12 @@ $(window).load(function() {
       $('html, body').animate({'scrollTop': 0}, 500);
     });
 
-  $('.main-menu a[data-default=true]').click();
-
   $('body').scrollspy({
     target: 'div.main-menu',
     offset: 95
   });
+
+  $('.main-menu a[data-default=true]').click();  
 
   documentHeight = $(document).height();
 
