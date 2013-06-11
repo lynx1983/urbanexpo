@@ -104,7 +104,7 @@ $(window).load(function() {
         var $submenu = $('ul.sub-menu.' + page, 'div.sub-menu');
         var topOffset = $('#' + page).position().top;
         $('body').scrollspy('disable');
-        $('html, body').animate({'scrollTop': topOffset - ($submenu.length ? 90 : 45)}, 
+        $('html, body').animate({'scrollTop': topOffset - ($submenu.length ? 86 : 45)}, 
           {
             duration: 500, 
             complete: function() {
@@ -128,6 +128,9 @@ $(window).load(function() {
       if($submenu.length) {
         $('div.sub-menu').show();
         $submenu.slideDown();
+        if($submenu.find('.active').length == 0) {
+          $submenu.find('li').eq(0).addClass('active');
+        }
       }
     }
   })

@@ -257,6 +257,10 @@ div.item .footer .links .more:hover {
     text-decoration: underline;
 }
 
+#news {
+    padding-top: 26px;
+}
+
 #news div.item {
     width: 255px;
     margin: 14px;
@@ -299,6 +303,10 @@ div.item .footer .links .more:hover {
     border: none;
 }
 
+#portfolio {
+    padding-top: 26px;
+}
+
 #portfolio div.item {
     width: 548px;
 }
@@ -314,8 +322,8 @@ div.item .footer .links .more:hover {
     margin-top: 5px;
 }
 
-#service article:first-child {
-    padding-top: 30px;
+#service {
+    padding-top: 40px;
 }
 
 #service div.item {
