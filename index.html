@@ -19,11 +19,12 @@
 					<a id="logo" href="#"><img src="img/logo.png"/></a>
 				</div>
 				<div class="main-menu">
+					<a href="#" id="order-link">Хочу брендинг! :)</a>
 					<ul class="menu main-menu nav">
 						<li><a href="#news" class="page" data-page="news">Новости</a></li>
 						<li><a href="#tech" class="page" data-page="tech">Технологии</a></li>
 						<li><a href="#portfolio" class="page" data-page="portfolio">Портфолио</a></li>
-						<li><a href="#service" class="page" data-page="service">Услуги</a></li>
+						<li><a href="#service" class="page" data-order="true" data-page="service">Услуги</a></li>
 						<li><a href="#about" class="page" data-page="about" data-default=true>О компании</a></li>
 						<li><a href="#contacts" class="page" data-page="contacts">Контакты</a></li>
 					</ul>
@@ -38,11 +39,11 @@
 				<li><a href="#" class="filter" data-filter-page="portfolio" data-filter-value=".expo">Expo</a></li>
 			</ul>
 			<ul class="menu sub-menu service">
-				<li><a href="#">Брендинг</a></li>
-				<li><a href="#">PR</a></li>
-				<li><a href="#">Event</a></li>
-				<li><a href="#">Expo</a></li>
-				<li><a href="#">Web</a></li>
+				<li><a href="#" data-order-title="Хочу брендинг! :)">Брендинг</a></li>
+				<li><a href="#" data-order-title="Хочу PR! :)">PR</a></li>
+				<li><a href="#" data-order-title="Хочу Event! :)">Event</a></li>
+				<li><a href="#" data-order-title="Хочу Expo! :)">Expo</a></li>
+				<li><a href="#" data-order-title="Хочу Web! :)">Web</a></li>
 			</ul>
 		</div>
 	</header>
@@ -599,7 +600,7 @@
 						</div>
 					</div>
 					<div class="content">
-						<form>
+						<form method="post">
 							<div class="row clearfix">
 								<label class="required">Тема сообщения</label>
 								<input type="text" name="subject" />
@@ -631,6 +632,9 @@
 							<div class="row clearfix">
 								<label class="required">Сообщение</label>
 								<textarea name="body"></textarea>
+							</div>
+							<div class="row clearfix">
+								<button class="right">Отправить</button>
 							</div>
 						</form>
 					</div>
@@ -710,6 +714,45 @@
 				</ul>
 			</div>
 		</div>
+	</div>
+	<div id="order-form" style="display:none;">
+		<div class="header">
+			<h2>Заказать брендинг</h2>
+		</div>
+		<form method="post">
+			<div class="row clearfix">
+				<div class="col3">
+					<label class="required">Имя</label>
+					<input type="text" name="name" />
+				</div>
+				<div class="col3">
+					<label>Компания</label>
+					<input type="text" name="company" />
+				</div>
+				<div class="col3">
+					<label>Должность</label>
+					<input type="text" name="state" />
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col2">
+					<label class="required">E-mail</label>
+					<input type="text" name="email" />
+				</div>
+				<div class="col2">
+					<label>Телефон</label>
+					<input type="text" name="phone" />
+				</div>
+			</div>
+			<div class="row clearfix">
+				<label class="required">Сообщение</label>
+				<textarea name="body"></textarea>
+			</div>
+			<div class="row clearfix">
+				<p class="help left"><span class="required">*</span> - Обязательные для заполнения поля помечены</p>
+				<button class="right">Отправить</button>
+			</div>
+		</form>
 	</div>
 </body>
 </html>

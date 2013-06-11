@@ -624,11 +624,19 @@ li.person:hover .mask {
     margin-right: 150px;
 }
 
-#contacts form .row {
+form .row {
     margin-bottom: 15px;
 }
 
-#contacts form .col2 {
+form .row .right {
+    float: right;
+}
+
+form .row .left {
+    float: left;
+}
+
+form .col2 {
     width: 50%;
     float: left;
     padding-right: 8px;
@@ -638,15 +646,15 @@ li.person:hover .mask {
     -webkit-box-sizing: border-box;
 }
 
-#contacts form .col2:first-child {
+form .col2:first-child {
     padding-left: 0;
 }
 
-#contacts form .col2:last-child {
+form .col2:last-child {
     padding-right: 0;
 }
 
-#contacts form .col3 {
+form .col3 {
     width: 33.3%;
     float: left;
     padding-right: 8px;
@@ -656,25 +664,25 @@ li.person:hover .mask {
     -webkit-box-sizing: border-box;
 }
 
-#contacts form .col3:first-child {
+form .col3:first-child {
     padding-left: 0;
 }
 
-#contacts form .col3:last-child {
+form .col3:last-child {
     padding-right: 0;
 }
 
-#contacts form label {
+form label {
     display: block;
     margin-bottom: 5px;
 }
 
-#contacts form label.required:after {
+form label.required:after {
     content: "*";
     color: red;
 }
 
-#contacts form input {
+form input {
     font-size: 1em;
     padding: 7px;
     width: 100%;
@@ -684,7 +692,7 @@ li.person:hover .mask {
     border: 1px solid #919395;
 }
 
-#contacts form textarea {
+form textarea {
     resize: none;
     width: 100%;
     box-sizing: border-box;
@@ -692,6 +700,14 @@ li.person:hover .mask {
     -webkit-box-sizing: border-box;
     border: 1px solid #919395;
     height: 200px;
+}
+
+form .help {
+    font-size: 0.7em;
+}
+
+form span.required {
+    color: red;
 }
 
 #contacts .wrapper {
@@ -910,6 +926,55 @@ div.paragraph p.quote {
 
 #overlay .tabs-wrapper div.tab {
     padding: 0;
+}
+
+#overlay .header {
+    padding: 70px 130px 0;
+    border-bottom: 1px solid #EB1C24;
+}
+
+#overlay .header h2 {
+    font-size: 2.7em;
+    color: #EB1C24;
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 5px solid #EB1C24;
+}
+
+#order-link {
+    margin-top: 15px;
+    display: none;
+    float: right;
+    font-family: FreeSetCItalic;
+}
+
+#overlay form {
+    padding: 40px 170px 80px 130px;
+}
+
+button {
+    font-size: 1.175em;
+    font-family: FreeSetCRegular;
+    background: #FFFFFF;
+    border: 1px solid #919395;
+    line-height: 2em;
+    vertical-align: middle;
+    padding: 0.8em 1.5em;
+    margin: 0;
+    color: #919395;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #FFFFFF;
+    border-color: #EB1C24;
+    background: #EB1C24;
+}
+
+button.submited {
+    color: #EB1C24;
+    border-color: #EB1C24;
+    background: #FFFFFF;   
 }
 
 @media screen and (max-width: 800px) {
