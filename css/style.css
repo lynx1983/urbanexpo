@@ -221,7 +221,7 @@ header.fixed + #content {
 
 div.page {
     display: block;
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 }
 
 div.page:last-child {
@@ -286,15 +286,39 @@ div.item .footer .links .more:hover {
 #news div.item {
     width: 255px;
     margin: 14px;
+    position: relative;
 }
 
 #news div.item .content {
     padding: 20px;
 }
 
+#news div.item .item-image-wrapper {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 120%;
+    -webkit-transition-duration: 0.5s;
+         -moz-transition-duration: 0.5s;
+          -ms-transition-duration: 0.5s;
+           -o-transition-duration: 0.5s;
+              transition-duration: 0.5s;    
+}
+
+#news div.item .item-image-wrapper:hover {
+    background-size: 100%;
+}
+
+#news div.item img.item-image {
+    opacity: 0;
+}
+
 #news div.item .content .heading {
     padding-bottom: 15px;
     border-bottom: 1px solid #EB1C24;
+}
+
+#news div.item .content .heading a {
+    color: #000000;
 }
 
 #news div.item .content .heading h2 {
@@ -312,6 +336,14 @@ div.item .footer .links .more:hover {
 
 #news div.item .timestamp span {
     font-size: 0.85em;
+}
+
+#news div.item .timestamp a {
+    color: #000000;
+}
+
+#news div.item .timestamp a:hover {
+    color: #EB1C24;
 }
 
 #news div.item .footer {
@@ -413,12 +445,12 @@ article .header h2 {
     border-bottom: 5px solid #EB1C24;
 }
 
-article > .content {
+article .wrapper > .content {
     padding: 20px 170px;
     line-height: 1.2em;
 }
 
-article > .content p {
+article .wrapper > .content p {
     margin-bottom: 1.5em;
 }
 
