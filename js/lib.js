@@ -119,7 +119,7 @@ $(window).load(function() {
   );
 
   $('a[data-page]').click(
-    function() {
+    function(event) {
       var page = $(this).data('page');
       if(page) {
         var $submenu = $('ul.sub-menu.' + page, 'div.sub-menu');
@@ -128,14 +128,15 @@ $(window).load(function() {
         $('html, body').animate({'scrollTop': topOffset - ($submenu.length ? 86 : 45)}, 
           {
             duration: 500, 
-            complete: function() {
+            complete: $.proxy(function() {
               $('body').scrollspy('enable');
               $('body').scrollspy('process');
-            }
+              window.location.hash = $(this).attr('href');
+            }, this),
           }
         );
       }
-      return true;
+      return false;
     }
   );
 
@@ -363,7 +364,6 @@ $(window).load(function() {
       } else {
         $('#tech-bg').css('top', -(432-offset));
       }
-      console.log("Scroll: " + offset);
     }
   )
 
