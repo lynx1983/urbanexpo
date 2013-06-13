@@ -1122,6 +1122,10 @@ button.submited {
     div.main-menu {
         margin-left: 200px;
     }
+
+    article .header-wrapper {
+        width: 1024px;
+    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -1138,6 +1142,7 @@ button.submited {
     }
 
     article .header-wrapper {
+        width: auto;
         margin-left: 10%;
     }
 
