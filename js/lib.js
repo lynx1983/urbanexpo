@@ -164,10 +164,12 @@ $(window).load(function() {
     }
   })
 
-  $('section .header a').click(
+  $('#about section .header a').click(
     function() {
+      if($(this).closest('section').hasClass('active')) return false;
       $(this).closest('.sections').find('section').removeClass('active').find('.content').slideUp();
       $(this).closest('section').addClass('active').find('.content').slideDown();
+      $('#about .tabs-wrapper').removeClass('active');
       return false;
     }
   );
@@ -200,9 +202,13 @@ $(window).load(function() {
 
   $('.tabs-wrapper .tabs a').click(
     function() {
-      if($(this).parent().hasClass('active')) return false;
+      if($(this).parent().hasClass('active') && $(this).closest('.tabs-wrapper').hasClass('active')) return false;
+      if($(this).parents('#about').length > 0) {
+        $('#about section').removeClass('active').find('.content').hide();
+      } 
       var $wrapper = $(this).closest('.tabs-wrapper');
       var $marker = $wrapper.find('.marker');
+      $wrapper.addClass('active');
       $wrapper.find('.tabs li').removeClass('active');
       var tab = $(this).data('tab');
       var $activeItem = $(this).closest('li').addClass('active');
@@ -314,6 +320,16 @@ $(window).load(function() {
   $('form button').click(
     function() {
       $(this).addClass('submited');
+    }
+  );
+
+  $('#about .tabs-wrapper')
+    .addClass('active')
+    .find('li a').eq(0).click();
+
+  $('.page-header a').click(
+    function() {
+      return false;
     }
   );
 

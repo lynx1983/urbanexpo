@@ -469,13 +469,18 @@ section .content {
 }
 
 .tabs-wrapper div.tabs {
+    border-bottom: 1px solid #ADADAD;
+}
+
+.tabs-wrapper.active div.tabs {
     border-bottom: 1px solid #EB1C24;
 }
 
 .tabs-wrapper .marker {
+    display: none;
     position: absolute;
     height: 5px;
-    background-color: red;
+    background-color: #EB1C24;
     width: 0px;
     bottom: 0px;
     left: 0px;
@@ -484,6 +489,10 @@ section .content {
       -ms-transition-duration: 0.5s;
        -o-transition-duration: 0.5s;
           transition-duration: 0.5s;
+}
+
+.tabs-wrapper.active .marker {
+    display: block;
 }
 
 .tabs-wrapper ul.tabs {
@@ -507,7 +516,7 @@ section .content {
     font-size: 1.15em;
 }
 
-.tabs-wrapper ul.tabs li.active a {
+.tabs-wrapper.active ul.tabs li.active a {
     color: #EB1C24;
     font-size: 2em;
 }
@@ -1004,6 +1013,24 @@ button.submited {
     color: #EB1C24;
     border-color: #EB1C24;
     background: #FFFFFF;   
+}
+
+.page-header {
+    border-bottom: 1px solid #000000;
+    margin-bottom: 20px;
+}
+
+.page-header a {
+    width: 1024px;
+    margin: 0 auto;
+    display: block;
+}
+
+.page-header h2 {
+    font-size: 3em;
+    border-bottom: 5px solid #000000;
+    color: #000000;
+    display: inline-block;
 }
 
 @media screen and (max-width: 800px) {
