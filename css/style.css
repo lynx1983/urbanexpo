@@ -611,6 +611,7 @@ li.person:hover .mask {
     display: block;
     width: 24px;
     height: 24px;
+    background-position: 0 0;
 }
 
 .share-links a.icon.vk {
@@ -623,6 +624,10 @@ li.person:hover .mask {
 
 .share-links a.icon.tw {
     background: url('../img/link-tw.png') no-repeat;
+}
+
+.share-links a.icon:hover {
+    background-position: -24px 0;
 }
 
 #contacts {
