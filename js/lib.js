@@ -60,6 +60,7 @@ var $portfolio;
 var $news;
 var $equipment;
 var documentHeight;
+var map;
 
 function showOverlay() {
   $('body').css('overflow', 'hidden');
@@ -74,7 +75,7 @@ function hideOverlay() {
 $(window).load(function() {
   $('#contacts').height(Math.max($('#contacts .inner').outerHeight(true), $(window).height()));
 
-  var map = new ymaps.Map ("map", {
+  map = new ymaps.Map ("map", {
     center: [55.76, 37.64], 
     zoom: 7
   });
@@ -368,5 +369,6 @@ $(window).load(function() {
 
   $(window).resize(function() {
     $('#contacts').height(Math.max($('#contacts .inner').outerHeight(true), $(window).height()));
+    map.container.fitToViewport();
   }); 
 })
