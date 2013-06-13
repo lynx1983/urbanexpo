@@ -852,6 +852,7 @@ form span.required {
     left: 50%;
     margin-left: -427px;
     background: url('../img/tech-bg.png') no-repeat center bottom;
+    z-index: 1;
 }
 
 #tech .header {
@@ -864,6 +865,9 @@ form span.required {
 }
 
 #tech .inner {
+    background: #FFFFFF;
+    position: relative;
+    z-index: 2;
 }
 
 #tech .header h2 {
