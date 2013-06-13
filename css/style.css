@@ -450,6 +450,7 @@ article .header h2 {
 article .wrapper {
     margin: 0 auto;
     max-width: 1280px;
+    position: relative;
 }
 
 article .wrapper > .content {
@@ -699,6 +700,7 @@ li.person:hover .mask {
 #contacts .content {
     margin-left: 345px;
     padding: 25px 0 40px;
+    max-width: 1280px;
 }
 
 #contacts form {
@@ -1130,7 +1132,15 @@ button.submited {
         margin-left: 330px;
     }
 
-    article > .content {
+    article .header-wrapper {
+        margin-left: 10%;
+    }
+
+    article .wrapper {
+        margin-left: 10%;
+    }
+
+    article .wrapper > .content {
         float: left;
         width: 30%;
         padding-right: 45px;
@@ -1147,12 +1157,16 @@ button.submited {
     }
 
     article:nth-child(even) .header-wrapper {
-        width: 30%;
-        margin: 0 170px 0 45px;
-        float: right;
+
     }
 
-    article:nth-child(even) > .content {
+    article:nth-child(even) .header-inner {
+        width: 30%;
+        float: right;
+        margin-right: 170px;
+    }
+
+    article:nth-child(even) .wrapper > .content {
         float: right;
         padding-right: 170px;
         padding-left: 45px;
