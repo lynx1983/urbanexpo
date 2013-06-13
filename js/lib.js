@@ -202,14 +202,21 @@ $(window).load(function() {
     function() {
       if($(this).parent().hasClass('active')) return false;
       var $wrapper = $(this).closest('.tabs-wrapper');
+      var $marker = $wrapper.find('.marker');
       $wrapper.find('.tabs li').removeClass('active');
       var tab = $(this).data('tab');
-      $(this).closest('li').addClass('active');
-      $wrapper.find('.tab:visible').stop().fadeOut('fast', $.proxy(
-        function(tab) {
-          this.find('.tab[data-tab=' + tab +']').stop().fadeIn();    
-        }, $wrapper, tab)
-      );
+      var $activeItem = $(this).closest('li').addClass('active');
+      $marker.css('width', $activeItem.width());
+      $marker.css('left', $activeItem.position().left);
+      if($wrapper.find('.tab:visible').length) {
+        $wrapper.find('.tab:visible').stop().fadeOut('fast', $.proxy(
+          function(tab) {
+            this.find('.tab[data-tab=' + tab +']').stop().fadeIn();    
+          }, $wrapper, tab)
+        );
+      } else {
+        $wrapper.find('.tab[data-tab=' + tab +']').stop().fadeIn();
+      }
       
       return false;
     }
