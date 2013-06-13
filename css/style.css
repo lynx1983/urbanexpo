@@ -876,6 +876,7 @@ form span.required {
     margin: 0 auto;
     background: #FFFFFF;
     position: relative;
+    max-width: 1280px;
 }
 
 #overlay .close {
