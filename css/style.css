@@ -291,6 +291,7 @@ div.item .footer .links .more:hover {
 
 #news div.item .content {
     padding: 20px;
+    background: #FFFFFF;
 }
 
 #news div.item .item-image-wrapper {
@@ -434,7 +435,8 @@ article .header {
 }
 
 article .header-wrapper {
-    margin: 0 170px;
+    margin: 0 auto;
+    max-width: 1280px;
 }
 
 article .header h2 {
@@ -443,6 +445,11 @@ article .header h2 {
     display: inline-block;
     padding-bottom: 5px;
     border-bottom: 5px solid #EB1C24;
+}
+
+article .wrapper {
+    margin: 0 auto;
+    max-width: 1280px;
 }
 
 article .wrapper > .content {
@@ -508,25 +515,6 @@ section .content {
     border-bottom: 1px solid #EB1C24;
 }
 
-.tabs-wrapper .marker {
-    display: none;
-    position: absolute;
-    height: 5px;
-    background-color: #EB1C24;
-    width: 0px;
-    bottom: 0px;
-    left: 0px;
-    -webkit-transition-duration: 0.5s;
-     -moz-transition-duration: 0.5s;
-      -ms-transition-duration: 0.5s;
-       -o-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-}
-
-.tabs-wrapper.active .marker {
-    display: block;
-}
-
 .tabs-wrapper ul.tabs {
     margin: 0 auto;
     width: 1024px;
@@ -551,6 +539,25 @@ section .content {
 .tabs-wrapper.active ul.tabs li.active a {
     color: #EB1C24;
     font-size: 2em;
+}
+
+.tabs-wrapper ul.tabs li.marker {
+    display: none;
+    position: absolute;
+    height: 5px;
+    background-color: #EB1C24;
+    width: 0px;
+    bottom: 0px;
+    left: 0px;
+    -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+      -ms-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.tabs-wrapper.active ul.tabs li.marker {
+    display: block;
 }
 
 .tabs-wrapper .tab {
@@ -829,8 +836,20 @@ form span.required {
 }
 
 #tech {
-    background: url('../img/tech-bg.png') top center no-repeat;
     padding-top: 480px;
+    position: relative;
+}
+
+#tech-bg {
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    width: 856px;
+    height: 864px;
+    top: 432px;
+    left: 50%;
+    margin-left: -427px;
+    background: url('../img/tech-bg.png') no-repeat center bottom;
 }
 
 #tech .header {

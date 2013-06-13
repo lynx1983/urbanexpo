@@ -106,8 +106,8 @@ $(window).load(function() {
       $('#' + $(this).data("filterPage") + ' .isotope-wrapper').isotope({
         filter: $(this).data("filterValue")
       });
-      $(this).closest('.menu').find('li').removeClass('active');
-      $(this).closest('li').addClass('active');
+      $('ul.' + $(this).data("filterPage") + ' li').removeClass('active');
+      $('ul.' + $(this).data("filterPage") + ' li a[data-filter-value="' + $(this).data("filterValue") + '"]').parent().addClass('active');
 
       setTimeout(function() {
         $('body').scrollspy('refresh');
@@ -117,7 +117,7 @@ $(window).load(function() {
     }
   );
 
-  $('a.page').click(
+  $('a[data-page]').click(
     function() {
       var page = $(this).data('page');
       if(page) {
@@ -169,7 +169,9 @@ $(window).load(function() {
       if($(this).closest('section').hasClass('active')) return false;
       $(this).closest('.sections').find('section').removeClass('active').find('.content').slideUp();
       $(this).closest('section').addClass('active').find('.content').slideDown();
-      $('#about .tabs-wrapper').removeClass('active');
+      $('#about .tabs-wrapper')
+        .removeClass('active')
+        .find('.tab:visible').slideUp();
       return false;
     }
   );
@@ -204,7 +206,7 @@ $(window).load(function() {
     function() {
       if($(this).parent().hasClass('active') && $(this).closest('.tabs-wrapper').hasClass('active')) return false;
       if($(this).parents('#about').length > 0) {
-        $('#about section').removeClass('active').find('.content').hide();
+        $('#about section').removeClass('active').find('.content').slideUp();
       } 
       var $wrapper = $(this).closest('.tabs-wrapper');
       var $marker = $wrapper.find('.marker');
@@ -349,6 +351,20 @@ $(window).load(function() {
       documentHeight = $(this).height();
     }
   }); 
+
+  $(window).scroll(
+    function() {
+      var offset = $('#tech').offset().top - $(window).scrollTop() - 45;
+      if(offset < 0) {
+        $('#tech-bg').css('top', -432);
+      } else if(offset > 864) {
+        $('#tech-bg').css('top', 432);
+      } else {
+        $('#tech-bg').css('top', -(432-offset));
+      }
+      console.log("Scroll: " + offset);
+    }
+  )
 
   $(window).resize(function() {
     $('#contacts').height(Math.max($('#contacts .inner').outerHeight(true), $(window).height()));
