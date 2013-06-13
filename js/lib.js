@@ -61,6 +61,7 @@ var $news;
 var $equipment;
 var documentHeight;
 var map;
+var scrollingComplite;
 
 function showOverlay() {
   $('body').css('overflow', 'hidden');
@@ -125,13 +126,20 @@ $(window).load(function() {
         var $submenu = $('ul.sub-menu.' + page, 'div.sub-menu');
         var topOffset = $('#' + page).position().top;
         $('body').scrollspy('disable');
+        scrollingComplite = false;        
         $('html, body').animate({'scrollTop': topOffset - ($submenu.length ? 86 : 45)}, 
           {
             duration: 500, 
             complete: $.proxy(function() {
+              if(scrollingComplite) return;
+              scrollingComplite = true;
               $('body').scrollspy('enable');
               $('body').scrollspy('process');
-              window.location.hash = $(this).attr('href');
+              if(history.pushState) {
+                history.pushState(null, null, $(this).attr('href'));
+              } else {
+                location.hash = $(this).attr('href');
+              }
             }, this),
           }
         );
