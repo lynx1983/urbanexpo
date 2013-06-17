@@ -82,6 +82,7 @@
 html, body, a {
     font-family: FreeSetCRegular, sans-serif;
     font-size: 14px;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 a, a:visited, a:active, a:link {
