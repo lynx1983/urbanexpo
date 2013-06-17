@@ -1014,6 +1014,7 @@ div.paragraph p.quote {
 #overlay .tabs-wrapper ul.tabs {
     padding: 20px 0;
     border: none;
+    width: 100%;
 }
 
 #overlay .tabs-wrapper ul.tabs li {
@@ -1030,6 +1031,7 @@ div.paragraph p.quote {
 }
 
 #overlay .tabs-wrapper div.tab {
+    width: 100%;
     padding: 0;
 }
 
