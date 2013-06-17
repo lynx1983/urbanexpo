@@ -456,12 +456,12 @@ article .wrapper {
     position: relative;
 }
 
-article .wrapper > .content {
-    padding: 20px 170px;
+article .inner > .content {
+    padding: 20px 130px;
     line-height: 1.2em;
 }
 
-article .wrapper > .content p {
+article .inner > .content p {
     margin-bottom: 1.5em;
 }
 
@@ -1154,16 +1154,15 @@ button.submited {
     }
 
     article .header-wrapper {
-        width: auto;
-        margin: 0;
-        margin-left: 170px;
     }
 
     article .wrapper {
-        margin: 0;
     }
 
-    article .wrapper > .content {
+    article .wrapper .inner{
+    }
+
+    article .inner > .content {
         float: left;
         width: 30%;
         padding-right: 45px;
@@ -1180,21 +1179,24 @@ button.submited {
     }
 
     article:nth-child(even) .header-wrapper {
-        margin: 0;
         padding-left: 90px;
     }
 
     article:nth-child(even) .header-inner {
         width: 30%;
         float: right;
-        margin-right: 220px;
+        margin-right: 170px;
     }
 
     article:nth-child(even) .wrapper {
         padding-left: 90px;
     }
 
-    article:nth-child(even) .wrapper > .content {
+    article:nth-child(even) .wrapper .inner {
+
+    }
+
+    article:nth-child(even) .inner > .content {
         float: right;
         padding-right: 220px;
         padding-left: 45px;
