@@ -294,6 +294,7 @@ div.item .footer .links .more:hover {
     background: #FFFFFF;
 }
 
+#portfolio div.item .item-image-wrapper,
 #news div.item .item-image-wrapper {
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -305,10 +306,12 @@ div.item .footer .links .more:hover {
               transition-duration: 0.5s;    
 }
 
+#portfolio div.item .item-image-wrapper:hover,
 #news div.item .item-image-wrapper:hover {
     background-size: 100%;
 }
 
+#portfolio div.item img.item-image,
 #news div.item img.item-image {
     opacity: 0;
 }
@@ -1094,6 +1097,15 @@ button.submited {
     border-bottom: 5px solid #000000;
     color: #000000;
     display: inline-block;
+}
+
+.active .page-header {
+    border-bottom-color: #EB1C24;
+}
+
+.active .page-header h2 {
+    color: #EB1C24;
+    border-bottom-color: #EB1C24;
 }
 
 @media screen and (max-width: 800px) {

@@ -77,8 +77,8 @@ $(window).load(function() {
   $('#contacts').height(Math.max($('#contacts .inner').outerHeight(true), $(window).height()));
 
   map = new ymaps.Map ("map", {
-    center: [55.76, 37.64], 
-    zoom: 7
+    center: [55.771829, 37.629828], 
+    zoom: 17
   });
 
   map.controls
@@ -86,6 +86,11 @@ $(window).load(function() {
     .add('typeSelector')
     .add('mapTools')
     .add('trafficControl');
+
+  map.geoObjects.add(
+    new ymaps.Placemark([55.771829, 37.625828], {
+      balloonContent: 'Искать здесь!'
+  }));
 
   $portfolio = $('#portfolio .isotope-wrapper');
   $news = $('#news .isotope-wrapper');
@@ -126,7 +131,7 @@ $(window).load(function() {
         var $submenu = $('ul.sub-menu.' + page, 'div.sub-menu');
         var topOffset = $('#' + page).position().top;
         $('body').scrollspy('disable');
-        scrollingComplite = false;        
+        scrollingComplite = false;     
         $('html, body').animate({'scrollTop': topOffset - ($submenu.length ? 86 : 45)}, 
           {
             duration: 500, 
@@ -153,6 +158,8 @@ $(window).load(function() {
     var page = $a.data('page');
     if(page) {
       var $submenu = $('ul.sub-menu.' + page, 'div.sub-menu');
+      $('div.page').removeClass('active');
+      $('#' + page).addClass('active');   
       if($submenu.length) {
         $('div.sub-menu').slideDown();
         if(!$submenu.is(':visible')) {
@@ -244,6 +251,7 @@ $(window).load(function() {
     function() {
       $('#contacts .wrapper').animate({'left': '-60%'}, 500);
       $('#map').animate({'left': '20%'}, 500);
+      map.panTo([55.771829, 37.625828]);
       $('#show-map').hide();
       $('#show-contacts').show();
       return false;
@@ -254,6 +262,7 @@ $(window).load(function() {
     function() {
       $('#contacts .wrapper').animate({'left': '0'}, 500);
       $('#map').animate({'left': '80%'}, 500);
+      map.panTo([55.771829, 37.629828]);
       $('#show-contacts').hide();
       $('#show-map').show();
       return false;
@@ -302,11 +311,9 @@ $(window).load(function() {
     offset: 95
   });
 
-  $('.sub-menu.service a').click(
+  $('.sub-menu a[data-order-title]').click(
     function() {
-      if($(this).data('orderTitle')) {
-        $('#order-link').text($(this).data('orderTitle'));
-      }
+      $('#order-link').text($(this).data('orderTitle'));
       $(this).closest('.menu').find('li').removeClass('active');
       $(this).closest('li').addClass('active');
       return false;

@@ -23,7 +23,7 @@
 					<ul class="menu main-menu nav">
 						<li><a href="#news" class="page" data-page="news">Новости</a></li>
 						<li><a href="#tech" class="page" data-page="tech">Технологии</a></li>
-						<li><a href="#portfolio" class="page" data-page="portfolio">Портфолио</a></li>
+						<li><a href="#portfolio" class="page" data-order="true" data-page="portfolio">Портфолио</a></li>
 						<li><a href="#service" class="page" data-order="true" data-page="service">Услуги</a></li>
 						<li><a href="#about" class="page" data-page="about" data-default=true>О компании</a></li>
 						<li><a href="#contacts" class="page" data-page="contacts">Контакты</a></li>
@@ -33,10 +33,10 @@
 		</div>
 		<div class="sub-menu">
 			<ul class="menu sub-menu portfolio">
-				<li><a href="#" class="filter" data-filter-page="portfolio" data-filter-value="*">Все проекты</a></li>
-				<li><a href="#" class="filter" data-filter-page="portfolio" data-filter-value=".branding">Брендинг</a></li>
-				<li><a href="#" class="filter" data-filter-page="portfolio" data-filter-value=".event">Event</a></li>
-				<li><a href="#" class="filter" data-filter-page="portfolio" data-filter-value=".expo">Expo</a></li>
+				<li><a href="#" data-order-title="" class="filter" data-filter-page="portfolio" data-filter-value="*">Все проекты</a></li>
+				<li><a href="#" data-order-title="Хочу брендинг! :)" class="filter" data-filter-page="portfolio" data-filter-value=".branding">Брендинг</a></li>
+				<li><a href="#" data-order-title="Хочу Event! :)" class="filter" data-filter-page="portfolio" data-filter-value=".event">Event</a></li>
+				<li><a href="#" data-order-title="Хочу Expo! :)" class="filter" data-filter-page="portfolio" data-filter-value=".expo">Expo</a></li>
 			</ul>
 			<ul class="menu sub-menu service">
 				<li><a href="#" data-order-title="Хочу брендинг! :)">Брендинг</a></li>
@@ -509,7 +509,11 @@
 			</div>
 			<div class="isotope-wrapper">
 				<div class="item branding">
-					<img class="item-image" src="img/test-1.jpg"/>
+					<div class="item-image-wrapper" style="background-image: url('img/test-1.jpg');">
+						<a href="#">
+							<img class="item-image" src="img/test-1.jpg"/>
+						</a>
+					</div>
 					<div class="content clearfix">
 						<div class="heading">
 							<h2>Запущен сайт PR агентства "Galleria teatro"</h2>
@@ -531,7 +535,11 @@
 					</div> 
 				</div>
 				<div class="item event">
-					<img class="item-image" src="img/test-2.jpg"/>
+					<div class="item-image-wrapper" style="background-image: url('img/test-2.jpg');">
+						<a href="#">
+							<img class="item-image" src="img/test-2.jpg"/>
+						</a>
+					</div>
 					<div class="content clearfix">
 						<div class="heading">
 							<h2>Фирменный стиль CTR-AGENCY</h2>
@@ -554,7 +562,11 @@
 					</div> 
 				</div>
 				<div class="item expo">
-					<img class="item-image" src="img/test-1.jpg"/>
+					<div class="item-image-wrapper" style="background-image: url('img/test-1.jpg');">
+						<a href="#">
+							<img class="item-image" src="img/test-1.jpg"/>
+						</a>
+					</div>
 					<div class="content clearfix">
 						<div class="heading">
 							<h2>Запущен сайт PR агентства "Galleria teatro"</h2>
@@ -576,7 +588,11 @@
 					</div> 
 				</div>
 				<div class="item branding">
-					<img class="item-image" src="img/test-2.jpg"/>
+					<div class="item-image-wrapper" style="background-image: url('img/test-2.jpg');">
+						<a href="#">
+							<img class="item-image" src="img/test-2.jpg"/>
+						</a>
+					</div>
 					<div class="content clearfix">
 						<div class="heading">
 							<h2>Фирменный стиль CTR-AGENCY</h2>
