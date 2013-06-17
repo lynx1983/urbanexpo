@@ -1155,11 +1155,12 @@ button.submited {
 
     article .header-wrapper {
         width: auto;
-        margin-left: 10%;
+        margin: 0;
+        margin-left: 170px;
     }
 
     article .wrapper {
-        margin-left: 10%;
+        margin: 0;
     }
 
     article .wrapper > .content {
@@ -1179,18 +1180,23 @@ button.submited {
     }
 
     article:nth-child(even) .header-wrapper {
-
+        margin: 0;
+        padding-left: 90px;
     }
 
     article:nth-child(even) .header-inner {
         width: 30%;
         float: right;
-        margin-right: 170px;
+        margin-right: 220px;
+    }
+
+    article:nth-child(even) .wrapper {
+        padding-left: 90px;
     }
 
     article:nth-child(even) .wrapper > .content {
         float: right;
-        padding-right: 170px;
+        padding-right: 220px;
         padding-left: 45px;
     }
 
