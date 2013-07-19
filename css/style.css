@@ -144,76 +144,6 @@ div.main-menu {
     margin-left: 150px;
 }
 
-
-/*
-
-.left, .right {
-    position: relative;
-    height: 44px;
-    width: 100px;
-    background: #231f20;
-    display: inline-block;
-    z-index: 1;
-}
-
-.divider {
-    display: inline-block;
-    width: 23px;
-    height: 44px;
-    background: #84aa45;
-    position: relative;
-    z-index: 0;
-    left: 0px;
-}
-
-.divider.red {
-    background: red;
-}
-
-.left {
-    margin-right: -5px
-}
-
-.left:after {
-    content: '';
-    line-height: 0;
-    font-size: 0;
-    width: 0;
-    height: 0;
-    border-top: 44px solid transparent;
-    border-bottom: 0px solid transparent;
-    border-left: 20px solid #231f20;
-    border-right: 0px solid transparent;
-    position: absolute;
-    top: 0px;
-    right: -20px;
-}
-
-.right {
-    margin-left: -5px;
-    background: #231f20;
-}
-
-.right:before {
-    content: '';
-    line-height: 0;
-    font-size: 0;
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 44px solid transparent;
-    border-left: 0px solid transparent;
-    border-right: 20px solid #231f20;
-    position: absolute;
-    top: -20px;
-    left: -20px;
-}
-
-
-*/
-
-
-
 ul.main-menu {
     height: 100%;
 }
@@ -221,12 +151,36 @@ ul.main-menu {
 ul.main-menu li {
     position: relative;
     height: 100%;
-    display: inline-block;
+    display: block;
+    float: left;
     padding: 0 15px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     transition: border-bottom .1s ease-in-out;
+    background: #231f20;
     z-index: 1;
+}
+
+ul.main-menu li.divider {
+    background: #FFFFFF;
+    z-index: 0;
+    padding: 0 11px 0 10px;
+}
+
+ul.main-menu li.divider.green {
+    background: #84aa45;
+}
+
+ul.main-menu li.divider.yellow {
+    background: #e4b310;
+}
+
+ul.main-menu li.divider.cyan {
+    background: #0396c9;
+}
+
+ul.main-menu li.divider.red {
+    background: #e31c23;
 }
 
 ul.main-menu li.left:after {
@@ -237,7 +191,7 @@ ul.main-menu li.left:after {
     height: 0;
     border-top: 44px solid transparent;
     border-bottom: 0px solid transparent;
-    border-left: 20px solid #000;
+    border-left: 20px solid #231f20;
     border-right: 0px solid transparent;
     position: absolute;
     top: 0px;
@@ -253,7 +207,7 @@ ul.main-menu li.right:before {
     border-top: 20px solid transparent;
     border-bottom: 44px solid transparent;
     border-left: 0px solid transparent;
-    border-right: 20px solid #000;
+    border-right: 20px solid #231f20;
     position: absolute;
     top: -20px;
     left: -20px;
