@@ -370,15 +370,20 @@ div.item .footer .links .more:hover {
     width: 548px;
 }
 
+#portfolio div.item .content {
+    display: table;
+    width: 100%;
+    padding-top: 10px;
+}
+
 #portfolio div.item .content .heading {
     width: 50%;
-    float:left;
+    display: table-cell;
 }
 
 #portfolio div.item .content .teaser {
-    margin-left: 50%;
+    display: table-cell;
     border-left: 1px solid #EB1C24;
-    margin-top: 5px;
 }
 
 #service {
