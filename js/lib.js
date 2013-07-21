@@ -76,21 +76,23 @@ function hideOverlay() {
 $(window).load(function() {
   $('#contacts').height(Math.max($('#contacts .inner').outerHeight(true), $(window).height()));
 
-  map = new ymaps.Map ("map", {
-    center: [55.771829, 37.629828], 
-    zoom: 17
-  });
+  if(typeof ymaps != "undefined" && ymaps.Map) {
+    map = new ymaps.Map ("map", {
+      center: [55.771829, 37.629828], 
+      zoom: 17
+    });
 
-  map.controls
-    .add('zoomControl')
-    .add('typeSelector')
-    .add('mapTools')
-    .add('trafficControl');
+    map.controls
+      .add('zoomControl')
+      .add('typeSelector')
+      .add('mapTools')
+      .add('trafficControl');
 
-  map.geoObjects.add(
-    new ymaps.Placemark([55.771829, 37.625828], {
-      balloonContent: 'Искать здесь!'
-  }));
+    map.geoObjects.add(
+      new ymaps.Placemark([55.771829, 37.625828], {
+        balloonContent: 'Искать здесь!'
+    }));
+  }
 
   $portfolio = $('#portfolio .isotope-wrapper');
   $news = $('#news .isotope-wrapper');

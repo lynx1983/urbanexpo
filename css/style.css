@@ -287,7 +287,7 @@ div.page:last-child {
 }
 
 div.item {
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .3);
+    border: 1px #cacaca solid;
     margin: 17px;
 }
 
@@ -304,27 +304,30 @@ div.item .content .heading h2 {
 div.item .content .teaser {
     padding: 5px 20px 20px;
     line-height: 1.2em;
+    color: #939496;
 }
 
 div.item .footer {
-    padding-bottom: 10px;
+    border-top: 1px #cacaca solid;
 }
 
 div.item .footer .timestamp {
     width: 50%;
     float:left;
     line-height: 27px;
+    padding: 5px 0;
+    border-right: 1px #cacaca solid;
 }
 
 div.item .footer .timestamp span {
     margin-left: 30px;
     font-size: 0.85em;
+    color: #939496;
 }
 
 div.item .footer .links {
     margin-left: 50%;
-    border-left: 1px solid #EB1C24;
-    padding: 0 20px;
+    padding: 7px 20px 0;
 }
 
 div.item .footer .links .more {
@@ -366,7 +369,7 @@ div.item .footer .links .more:hover {
 
 #portfolio div.item .item-image-wrapper:hover,
 #news div.item .item-image-wrapper:hover {
-    background-size: 100%;
+    background-size: 105%;
 }
 
 #portfolio div.item img.item-image,
@@ -419,8 +422,9 @@ div.item .footer .links .more:hover {
     border: none;
 }
 
+#about,
 #portfolio {
-    padding-top: 26px;
+    padding-top: 48px;
 }
 
 #portfolio div.item {
@@ -430,7 +434,7 @@ div.item .footer .links .more:hover {
 #portfolio div.item .content {
     display: table;
     width: 100%;
-    padding-top: 10px;
+    border-top: 1px #CACACA solid;
 }
 
 #portfolio div.item .content .heading {
@@ -440,7 +444,7 @@ div.item .footer .links .more:hover {
 
 #portfolio div.item .content .teaser {
     display: table-cell;
-    border-left: 1px solid #EB1C24;
+    border-left: 1px solid #CACACA;
 }
 
 #service {
