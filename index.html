@@ -19,15 +19,22 @@
 					<a id="logo" href="#"><img src="img/logo.png"/></a>
 				</div>
 				<div class="main-menu">
-					<a href="#" id="order-link">Хочу брендинг! :)</a>
 					<ul class="menu main-menu nav">
-						<li class="left"><a href="#about" class="page" data-page="about" data-default=true>О компании</a></li>
+						<li class="left"><a href="#about" class="page" data-page="about" data-default=true>О компании</a>
+							<ul class="menu sub-menu about nav">
+								<li><a href="#about-about" class="section" data-section="about">О нас</a></li>
+								<li><a href="#about-team">Команда</a></li>
+								<li><a href="#about-advantages">Наши преимущества</a></li>
+								<li><a href="#about-recommendations">Рекомендации</a></li>
+								<li><a href="#about-vacancy">Вакансии</a></li>
+							</ul>
+						</li>
 						<li class="divider green"></li>
 						<li class="right left"><a href="#tech" class="page" data-page="tech">Технологии</a></li>
 						<li class="divider"></li>
 						<li class="right left"><a href="#portfolio" class="page" data-order="true" data-page="portfolio">Портфолио</a></li>
 						<li class="divider yellow"></li>
-						<li class="right left"><a href="#calendar" class="page" data-order="true" data-page="portfolio">Календарь</a></li>
+						<li class="right left"><a href="#calendar" class="page" data-order="true" data-page="calendar">Календарь</a></li>
 						<li class="divider cyan"></li>
 						<li class="right left"><a href="#service" class="page" data-order="true" data-page="service">Услуги</a></li>
 						<li class="divider red"></li>
@@ -37,355 +44,122 @@
 			</div>
 		</div>
 		<div class="sub-menu">
-			<ul class="menu sub-menu about">
-				<li><a href="#">О нас</a></li>
-				<li><a href="#">Команда</a></li>
-				<li><a href="#">Наши преимущества</a></li>
-				<li><a href="#">Рекомендации</a></li>
-				<li><a href="#">Вакансии</a></li>
-			</ul>
-			<ul class="menu sub-menu portfolio">
+			<!--<ul class="menu sub-menu about nav">
+				<li><a href="#about-about" class="section" data-section="about">О нас</a></li>
+				<li><a href="#about-team">Команда</a></li>
+				<li><a href="#about-advantages">Наши преимущества</a></li>
+				<li><a href="#about-recommendations">Рекомендации</a></li>
+				<li><a href="#about-vacancy">Вакансии</a></li>
+			</ul>-->
+			<!--<ul class="menu sub-menu portfolio nav">
 				<li><a href="#" data-order-title="" class="filter" data-filter-page="portfolio" data-filter-value="*">Все проекты</a></li>
 				<li><a href="#" data-order-title="Хочу брендинг! :)" class="filter" data-filter-page="portfolio" data-filter-value=".branding">Брендинг</a></li>
 				<li><a href="#" data-order-title="Хочу Event! :)" class="filter" data-filter-page="portfolio" data-filter-value=".event">Event</a></li>
 				<li><a href="#" data-order-title="Хочу Expo! :)" class="filter" data-filter-page="portfolio" data-filter-value=".expo">Expo</a></li>
-			</ul>
-			<ul class="menu sub-menu service">
+			</ul>-->
+			<!--<ul class="menu sub-menu service nav">
 				<li><a href="#" data-order-title="Хочу брендинг! :)">Брендинг</a></li>
 				<li><a href="#" data-order-title="Хочу PR! :)">PR</a></li>
 				<li><a href="#" data-order-title="Хочу Event! :)">Event</a></li>
 				<li><a href="#" data-order-title="Хочу Expo! :)">Expo</a></li>
 				<li><a href="#" data-order-title="Хочу Web! :)">Web</a></li>
-			</ul>
+			</ul>-->
 		</div>
 	</header>
 	<div id="content">
 		<div id="about" class="page wrapper clearfix">
-			<div class="tabs-wrapper">
-				<div class="tabs">
-					<ul class="tabs">
-						<li><a href="#" data-tab="about">О компании</a></li>
-						<li><a href="#" data-tab="team">Команда</a></li>
-						<li><a href="#" data-tab="vacancies">Вакансии</a></li>
-						<li class="marker"></li>
-					</ul>
-				</div>
-				<div class="tab" data-tab="about">
-					<p>Компания Урбан Групп основана в 2005 году как агентство корпоративного маркетинга. В 2006 вышло на рынок с услугами Брендинга и айдентики, а также общедизайнерских услуг. С 2007 года, агентство дополнил отдел по проведению BTL и Event. С 2011 функционирует как агентство полного цикла с дополнительными направлениями SMM и SMO услуг.</p>
-				</div>
-				<div class="tab" data-tab="team">
-					<div class="person-card">
-						<div class="foto-wrapper">
-							<img src="img/person-1.jpg"/>
-						</div>
-						<div class="person-details clearfix">
-							<h3>Елизавета<br/>Александра Мария</h3>
-							<p class="state">PR директор</p>
-							<p class="details">Компания Урбан Групп основана в 2005 году как агентство корпоративного маркетинга. В 2006 вышло на рынок с услугами Брендинга и айдентики, а также общедизайнерских услуг. С 2007 года, агентство дополнил отдел по проведению BTL и Event. С 2011 функционирует как агентство полного цикла с дополнительными направлениями SMM и SMO услуг.</p>
-						</div>
-					</div>
-					<ul class="persons">
-						<li class="person active"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
-						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
-						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
-						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
-						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
-						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
-						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
-						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
-						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
-						<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
-					</ul>
-				</div>
-				<div class="tab" data-tab="vacancies">
-					<form method="post">
-						<div class="row clearfix">
-							<div class="col3">
-								<label>Фамилия</label>
-								<input type="text" name="surname" />
-							</div>
-							<div class="col3">
-								<label>Имя</label>
-								<input type="text" name="name" />
-							</div>
-							<div class="col3">
-								<label>Отчество</label>
-								<input type="text" name="lastname" />
-							</div>
-						</div>
-						<div class="row clearfix">
-							<div class="col2">
-								<label>Телефон</label>
-								<input type="text" name="phone" />
-							</div>
-							<div class="col2">
-								<label>E-mail</label>
-								<input type="text" name="email" />
-							</div>							
-						</div>
-						<div class="row clearfix">
-							<p class="help left"><span class="required">*</span> - Обязательные для заполнения поля помечены</p>
-							<button class="right">Отправить</button>
-						</div>
-					</form>
-				</div>
-			</div>
 			<div class="sections">
-				<section>
+				<section id="about-about">
 					<div class="header">
-						<a href="#"><h2>Решения в области брендинга</h2></a>
+						<a href="#"><h2>О нас</h2></a>
+					</div>
+					<div class="content">
+						<p>FROM IDEAS TO PRODUCTION "We always look for innovative uses of materials and technologies. Every job is seen as a challenge where we search to develop something new." Jordi Hernández CTO</p>
+						<p>Indissoluble is a multidisciplinary team managed by Juan Roberto Vásquez as CEO and Jordi Hernández as CTO.</p>
+						<p>Indissoluble is composed today by 18 professionals, all of them competent both in creative and technical skills. Its aim is to achieve excellence in all stages of any design.</p>
+						<ul>
+							<li>we design spaces and their relationship with people</li>
+							<li>we manage and create communication items
+							<li>we develop and use software and hardware to create new ways of interaction.
+							<li>we carry out and control all stages of production, from design to assembly.</li>
+						</ul>
+						<p>Indissoluble is composed today by 18 professionals, all of them competent both in creative and technical skills. Its aim is to achieve excellence in all stages of any design.</p>
+					</div>
+				</section>
+				<section id="about-team">
+					<div class="header">
+						<a href="#"><h2>Команда</h2></a>
+					</div>
+					<div class="content">
+						<div class="person-card">
+							<div class="foto-wrapper">
+								<img src="img/person-1.jpg"/>
+							</div>
+							<div class="person-details clearfix">
+								<div class="person-title">
+									<h3>Елизавета<br/>Александра Мария</h3>
+									<p class="state">PR директор</p>
+								</div>
+								<div class="description">
+									<p>Компания Урбан Групп основана в 2005 году как агентство корпоративного маркетинга. В 2006 вышло на рынок с услугами Брендинга и айдентики, а также общедизайнерских услуг. С 2007 года, агентство дополнил отдел по проведению BTL и Event. С 2011 функционирует как агентство полного цикла с дополнительными направлениями SMM и SMO услуг.</p>
+								</div>
+							</div>
+							<div class="cards">
+								<ul class="persons clearfix">
+									<li class="person active"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+									<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+									<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+									<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+									<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+									<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+									<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+									<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+									<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+									<li class="person"><a href="#"><img src="img/person-1.jpg" /></a><div class="mask"></div></li>
+									<li class="person empty"></li>
+									<li class="person empty"></li>
+									<li class="person empty"></li>
+									<li class="person empty"></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="about-advantages">
+					<div class="header">
+						<a href="#"><h2>Наши преимущества</h2></a>
+					</div>
+					<div class="content">
+						<ol>
+							<li>Профессиональные дизайнеры-архитекторы<blockquote>(Творческие и креативные люди с профельным образованием)</blockquote></li>
+							<li>Персональный менеджер проекта<blockquote>(На протяжении всего этапа подготовки к строительству выставочного стенда, Вам будет предоставлен персональный менеджер)</blockquote></li>
+							<li>Предоставляем от 2-х до 5-и Вариантов дизайн проектов</li>
+							<li>Собственная производственная база<blockquote>(Общая площадь около 5 000 кв.м оснащена всем необходимым оборудованием для строительства и подготовки выставочных стендов стендов)</blockquote></li>
+							<li>Инженерно-конструкторский отдел<blockquote>(Проводим полную техническую подготовку в соответствии с международными требованиями, прорисовка макета в AUTO  CAD, детальный просчет нагрузок и порядок монтажа конструкций)</blockquote></li>
+							<li>Опытные бригады монтажников<blockquote>(в Компании работает постоянная бригада опытных строителей монтажников)</blockquote></li>
+							<li>Предоставляем дополнительные Услуги — Зачем разрываться между множеством подрядчиков, когда можно все доверить одному надежному партнеру.<blockquote>(Подбор  персонала на выставку, Флористика, Проведение шоу программ,Аренда аудио видео и медиа апаратуры)</blockquote></li>
+							<li>Низкие цены от 5 000 руб. за кв.м<blockquote>(что входит в бюджет от 5 000 руб. за кв.м, смотрите здесь)</li>
+							<li>Аккредитованы на всех выставочных площадках Москвы<blockquote>(Экспоцентр, Крокус Экспо, ВК "Сокольники", ЦДХ, Манеж, Гостиный Двор)</blockquote></li>
+							<li>Предоставляем от 10% скидки при следующем строительстве<blockquote>(Для постоянных клиентов компании мы всегда рады предложить дополнительную скидку или подготовить спецпредложение)</blockquote></li>
+						</ol>
+					</div>
+				</section>
+				<section id="about-recommendations">
+					<div class="header">
+						<a href="#"><h2>Рекомендации</h2></a>
 					</div>
 					<div class="content">
 						Content
 					</div>
 				</section>
-				<section>
+				<section id="about-vacancy">
 					<div class="header">
-						<a href="#"><h2>Организация EVENT-мероприятий</h2></a>
+						<a href="#"><h2>Вакансии</h2></a>
 					</div>
 					<div class="content">
 						Content
 					</div>
 				</section>
-				<section>
-					<div class="header">
-						<a href="#"><h2>Коммуникация со СМИ (media relations)</h2></a>
-					</div>
-					<div class="content">
-						Content
-					</div>
-				</section>
-			</div>
-		</div>
-		<div id="news" class="page wrapper clearfix">
-			<div class="page-header">
-				<a href="#">
-					<h2>Новости</h2>
-				</a>
-			</div>
-			<div class="isotope-wrapper">
-				<div class="item">
-					<div class="item-image-wrapper" style="background-image: url('img/test-1.jpg');">
-						<a href="#">
-							<img class="item-image" src="img/test-1.jpg"/>
-						</a>
-					</div>
-					<div class="content clearfix">
-						<div class="heading">
-							<a href="#"><h2>Запущен сайт PR агентства "Galleria teatro"</h2></a>
-						</div>
-						<div class="timestamp"><span>6 Июль, 2012, <a href="#portfolio" data-page="portfolio" class="filter" data-filter-page="portfolio" data-filter-value=".branding">брендинг</a></span></div>	
-						<div class="teaser">
-							Агентство акцентирует свою деятельность на сохранении культурного наследия и установления связи между исторически важными событиями страны и коммерческими структурами.
-						</div>
-						<div class="footer">
-							<div class="links clearfix">
-								<a class="more" href="#">Подробнее</a>
-								<ul class="share-links">
-									<li><a href="#" class="icon vk"></a></li>
-									<li><a href="#" class="icon fb"></a></li>
-									<li><a href="#" class="icon tw"></a></li>
-								</ul>
-							</div>
-						</div> 
-					</div>
-				</div>
-				<div class="item">
-					<div class="item-image-wrapper" style="background-image: url('img/test-2.jpg');">
-						<a href="#">
-							<img class="item-image" src="img/test-2.jpg"/>
-						</a>
-					</div>
-					<div class="content clearfix">
-						<div class="heading">
-							<a href="#">
-								<h2>Фирменный стиль CTR-AGENCY</h2>
-							</a>
-						</div>
-						<div class="timestamp"><span>25 Январь, 2013, <a href="#">брендинг</a></span></div>	
-						<div class="teaser">
-							Эмоции – это всегда всплеск! А положительные эмоции это радужный всплеск!
-						</div>
-						<div class="footer">
-							<div class="links clearfix">
-								<a class="more" href="#">Подробнее</a>
-								<ul class="share-links">
-									<li><a href="#" class="icon vk"></a></li>
-									<li><a href="#" class="icon fb"></a></li>
-									<li><a href="#" class="icon tw"></a></li>
-								</ul>
-							</div>
-						</div> 
-					</div>
-				</div>
-				<div class="item">
-					<div class="item-image-wrapper" style="background-image: url('img/test-3.jpg');">
-						<a href="#">
-							<img class="item-image" src="img/test-3.jpg"/>
-						</a>
-					</div>
-					<div class="content clearfix">
-						<div class="heading">
-							<a href="#">
-								<h2>Barline обзавелся собственными адверториалс</h2>
-							</a>
-						</div>
-						<div class="timestamp"><span>25 Январь, 2013, <a href="#">брендинг</a></span></div>	
-						<div class="teaser">
-							В рамках бренд-поддержки сиропов Барлайн, агентством Арт Урбан были разработы адверториалс для журналов в прессу.
-						</div>
-						<div class="footer">
-							<div class="links clearfix">
-								<a class="more" href="#">Подробнее</a>
-								<ul class="share-links">
-									<li><a href="#" class="icon vk"></a></li>
-									<li><a href="#" class="icon fb"></a></li>
-									<li><a href="#" class="icon tw"></a></li>
-								</ul>
-							</div>
-						</div> 
-					</div>
-				</div>
-				<div class="item">
-					<div class="item-image-wrapper" style="background-image: url('img/test-4.jpg');">
-						<a href="#">
-							<img class="item-image" src="img/test-4.jpg"/>
-						</a>
-					</div>
-					<div class="content clearfix">
-						<div class="heading">
-							<a href="#">
-								<h2>Кейс по корпоративному брендингу unlim 500+</h2>
-							</a>
-						</div>
-						<div class="timestamp"><span>25 Январь, 2013, <a href="#">брендинг</a></span></div>	
-						<div class="teaser">
-							Организаторами и инвесторами проекта было принято решение провести стилизацию логотипа и всей атрибутики, продукции, сопровождающей проект.
-						</div>
-						<div class="footer">
-							<div class="links clearfix">
-								<a class="more" href="#">Подробнее</a>
-								<ul class="share-links">
-									<li><a href="#" class="icon vk"></a></li>
-									<li><a href="#" class="icon fb"></a></li>
-									<li><a href="#" class="icon tw"></a></li>
-								</ul>
-							</div>
-						</div> 
-					</div>
-				</div>
-				<div class="item">
-					<div class="item-image-wrapper" style="background-image: url('img/test-1.jpg');">
-						<a href="#">
-							<img class="item-image" src="img/test-1.jpg"/>
-						</a>
-					</div>
-					<div class="content clearfix">
-						<div class="heading">
-							<a href="#">
-								<h2>Запущен сайт PR агентства "Galleria teatro"</h2>
-							</a>
-						</div>
-						<div class="timestamp"><span>6 Июль, 2012, <a href="#">web</a></span></div>	
-						<div class="teaser">
-							Агентство акцентирует свою деятельность на сохранении культурного наследия и установления связи между исторически важными событиями страны и коммерческими структурами.
-						</div>
-						<div class="footer">
-							<div class="links clearfix">
-								<a class="more" href="#">Подробнее</a>
-								<ul class="share-links">
-									<li><a href="#" class="icon vk"></a></li>
-									<li><a href="#" class="icon fb"></a></li>
-									<li><a href="#" class="icon tw"></a></li>
-								</ul>
-							</div>
-						</div> 
-					</div>
-				</div>
-				<div class="item">
-					<div class="item-image-wrapper" style="background-image: url('img/test-2.jpg');">
-						<a href="#">
-							<img class="item-image" src="img/test-2.jpg"/>
-						</a>
-					</div>
-					<div class="content clearfix">
-						<div class="heading">
-							<a href="#">
-								<h2>Фирменный стиль CTR-AGENCY</h2>
-							</a>
-						</div>
-						<div class="timestamp"><span>25 Январь, 2013, <a href="#">брендинг</a></span></div>	
-						<div class="teaser">
-							Эмоции – это всегда всплеск! А положительные эмоции это радужный всплеск!
-						</div>
-						<div class="footer">
-							<div class="links clearfix">
-								<a class="more" href="#">Подробнее</a>
-								<ul class="share-links">
-									<li><a href="#" class="icon vk"></a></li>
-									<li><a href="#" class="icon fb"></a></li>
-									<li><a href="#" class="icon tw"></a></li>
-								</ul>
-							</div>
-						</div> 
-					</div>
-				</div>
-				<div class="item">
-					<div class="item-image-wrapper" style="background-image: url('img/test-3.jpg');">
-						<a href="#">
-							<img class="item-image" src="img/test-3.jpg"/>
-						</a>
-					</div>
-					<div class="content clearfix">
-						<div class="heading">
-							<a href="#">
-								<h2>Barline обзавелся собственными адверториалс</h2>
-							</a>
-						</div>
-						<div class="timestamp"><span>25 Январь, 2013, <a href="#">брендинг</a></span></div>	
-						<div class="teaser">
-							В рамках бренд-поддержки сиропов Барлайн, агентством Арт Урбан были разработы адверториалс для журналов в прессу.
-						</div>
-						<div class="footer">
-							<div class="links clearfix">
-								<a class="more" href="#">Подробнее</a>
-								<ul class="share-links">
-									<li><a href="#" class="icon vk"></a></li>
-									<li><a href="#" class="icon fb"></a></li>
-									<li><a href="#" class="icon tw"></a></li>
-								</ul>
-							</div>
-						</div> 
-					</div>
-				</div>
-				<div class="item">
-					<div class="item-image-wrapper" style="background-image: url('img/test-4.jpg');">
-						<a href="#">
-							<img class="item-image" src="img/test-4.jpg"/>
-						</a>
-					</div>
-					<div class="content clearfix">
-						<div class="heading">
-							<a href="#">
-								<h2>Кейс по корпоративному брендингу unlim 500+</h2>
-							</a>
-						</div>
-						<div class="timestamp"><span>25 Январь, 2013, <a href="#">брендинг</a></span></div>	
-						<div class="teaser">
-							Организаторами и инвесторами проекта было принято решение провести стилизацию логотипа и всей атрибутики, продукции, сопровождающей проект.
-						</div>
-						<div class="footer">
-							<div class="links clearfix">
-								<a class="more" href="#">Подробнее</a>
-								<ul class="share-links">
-									<li><a href="#" class="icon vk"></a></li>
-									<li><a href="#" class="icon fb"></a></li>
-									<li><a href="#" class="icon tw"></a></li>
-								</ul>
-							</div>
-						</div> 
-					</div>
-				</div>
 			</div>
 		</div>
 		<div id="tech" class="page wrapper clearfix">
@@ -618,6 +392,13 @@
 						</div>
 					</div> 
 				</div>
+			</div>
+		</div>
+		<div id="calendar" class="page clearfix">
+			<div class="page-header">
+				<a href="#">
+					<h2>Календарь</h2>
+				</a>
 			</div>
 		</div>
 		<div id="service" class="page wrapper clearfix">
