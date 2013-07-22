@@ -1213,6 +1213,43 @@ button.submited {
     color: #CCCCCC;
 }
 
+#vacancy-form {
+
+}
+
+#vacancy-form input {
+    margin: 0;
+    padding: 20px 15px;
+}
+
+#vacancy-form .row {
+    margin: 0;
+    display: table;
+    width: 100%;
+}
+
+#vacancy-form .row input {
+    border-top: none;
+    border-right: none;
+}
+
+#vacancy-form .row:first-of-type {
+    border-top: 1px solid #919395;
+}
+
+#vacancy-form .col2,
+#vacancy-form .col3 {
+    padding: 0;
+    float: none;
+    display: table-cell;
+}
+
+#vacancy-form .col3:last-child input,
+#vacancy-form .col2:last-child input {
+    border-right: 1px solid #919395;
+}
+
+
 @media screen and (max-width: 800px) {
     header .wrapper {
         width: 1024px;
