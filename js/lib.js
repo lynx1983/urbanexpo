@@ -135,7 +135,7 @@ $(window).load(function() {
         var topOffset = $('#' + page).position().top;
         $('body').scrollspy('disable');
         scrollingComplite = false;     
-        $('html, body').animate({'scrollTop': topOffset - (haveSubmenu || inSubmenu ? 90 : 45)}, 
+        $('html, body').animate({'scrollTop': topOffset - (haveSubmenu || inSubmenu ? 85 : 45)}, 
           {
             duration: 500, 
             complete: $.proxy(function() {
@@ -152,6 +152,12 @@ $(window).load(function() {
           }
         );
       }
+      return false;
+    }
+  );
+
+  $('a[data-month]').click(
+    function() {
       return false;
     }
   );
@@ -280,7 +286,7 @@ $(window).load(function() {
 
   $('body').scrollspy({
     target: 'div.main-menu',
-    offset: 100
+    offset: 95
   });
 
   $('#portfolio .item .more').click(

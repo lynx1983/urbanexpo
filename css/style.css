@@ -277,23 +277,33 @@ div.item .footer .links .more:hover {
     text-decoration: underline;
 }
 
-#news {
-    padding-top: 26px;
+#about,
+#portfolio {
+    padding-top: 48px;
 }
 
-#news div.item {
-    width: 255px;
-    margin: 14px;
-    position: relative;
+div.item.portfolio {
+    width: 548px;
 }
 
-#news div.item .content {
-    padding: 20px;
-    background: #FFFFFF;
+div.item.portfolio .content {
+    display: table;
+    width: 100%;
+    border-top: 1px #CACACA solid;
+    padding: 0;
 }
 
-#portfolio div.item .item-image-wrapper,
-#news div.item .item-image-wrapper {
+div.item.portfolio .content .heading {
+    width: 50%;
+    display: table-cell;
+}
+
+div.item.portfolio .content .teaser {
+    display: table-cell;
+    border-left: 1px solid #CACACA;
+}
+
+div.item.portfolio .item-image-wrapper {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 120%;
@@ -304,103 +314,16 @@ div.item .footer .links .more:hover {
               transition-duration: 0.5s;    
 }
 
-#portfolio div.item .item-image-wrapper:hover,
-#news div.item .item-image-wrapper:hover {
+div.item.portfolio .item-image-wrapper:hover {
     background-size: 105%;
 }
 
-#portfolio div.item img.item-image,
-#news div.item img.item-image {
+div.item.portfolio img.item-image {
     opacity: 0;
-}
-
-#news div.item .content .heading {
-    padding-bottom: 15px;
-    border-bottom: 1px solid #EB1C24;
-}
-
-#news div.item .content .heading a {
-    color: #000000;
-}
-
-#news div.item .content .heading h2 {
-    padding: 0;
-    margin: 0;
-}
-
-#news div.item .content .teaser {
-    padding: 0;
-}
-
-#news div.item .timestamp {
-    padding: 15px 0;
-}
-
-#news div.item .timestamp span {
-    font-size: 0.85em;
-}
-
-#news div.item .timestamp a {
-    color: #000000;
-}
-
-#news div.item .timestamp a:hover {
-    color: #EB1C24;
-}
-
-#news div.item .footer {
-    margin: 0;
-    padding: 0;
-}
-
-#news div.item .footer .links {
-    margin: 15px 0 0;
-    padding: 0;
-    border: none;
-}
-
-#about,
-#portfolio {
-    padding-top: 48px;
-}
-
-#portfolio div.item {
-    width: 548px;
-}
-
-#portfolio div.item .content {
-    display: table;
-    width: 100%;
-    border-top: 1px #CACACA solid;
-}
-
-#portfolio div.item .content .heading {
-    width: 50%;
-    display: table-cell;
-}
-
-#portfolio div.item .content .teaser {
-    display: table-cell;
-    border-left: 1px solid #CACACA;
 }
 
 #service {
     padding-top: 40px;
-}
-
-#service div.item {
-    width: 548px;
-}
-
-#service div.item .content .heading {
-    width: 50%;
-    float:left;
-}
-
-#service div.item .content .teaser {
-    margin-left: 50%;
-    border-left: 1px solid #EB1C24;
-    margin-top: 5px;
 }
 
 #about .video-wrapper {
@@ -1102,6 +1025,55 @@ button.submited {
     color: #EB1C24;
     border-color: #EB1C24;
     background: #FFFFFF;   
+}
+
+#calendar {
+    margin-bottom: 0;
+}
+
+#calendar .header {
+    margin-bottom: 0;
+}
+
+#calendar .content {
+    padding: 50px 0 50px;
+    border-left: 1px solid #949597;
+    border-right: 1px solid #949597;
+    width: 830px;
+}
+
+.calendar {
+    display: table;
+    width: 100%;
+}
+
+.calendar .weekdays {
+    display: table-row;
+}
+
+.calendar .weekdays .day {
+    display: table-cell;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding: 5px 0;
+    border-bottom: 1px solid #949597;
+    border-top: 1px solid #949597;
+    border-right: 1px solid #949597;
+    color: #949597;
+}
+
+.calendar .weekdays .day:last-child {
+    border-right: none;
+}
+
+.calendar .week {
+    display: table-row;
+    height: 
+}
+
+.calendar .week .day {
+    display: table-cell;
 }
 
 .page .header {
