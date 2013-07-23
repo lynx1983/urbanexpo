@@ -130,11 +130,12 @@ $(window).load(function() {
     function(event) {
       var page = $(this).data('page');
       if(page) {
-        var $submenu = $('ul.sub-menu.' + page, 'div.sub-menu');
+        var $submenu = $(this).closest('li').find('ul.sub-menu');
+        var $parentMenu = $(this).closest('li').closest('ul.menu li');
         var topOffset = $('#' + page).position().top;
         $('body').scrollspy('disable');
         scrollingComplite = false;     
-        $('html, body').animate({'scrollTop': topOffset - ($submenu.length ? 86 : 45)}, 
+        $('html, body').animate({'scrollTop': topOffset - ($submenu.length || $parentMenu.length ? 86 : 45)}, 
           {
             duration: 500, 
             complete: $.proxy(function() {
@@ -155,11 +156,31 @@ $(window).load(function() {
     }
   );
 
-  $('.main-menu li').on('activate', function() {
+  $('.main-menu > li').on('activate', function() {
+    var $a = $(this).find('> a');
+    var page = $a.data('page');
+    $(this).addClass("active")
+    if(page) {
+      var $submenu = $(this).find('div.sub-menu');
+      $('div.page').removeClass('active');
+      $('#' + page).addClass('active');   
+      if($submenu.length) {
+        $submenu.slideDown();
+        if(!$submenu.is(':visible')) {
+          $('ul.sub-menu:visible').hide();
+          $submenu.fadeIn();
+        }
+      } else {
+        $('div.sub-menu').fadeOut();
+      }
+    }
+  })
+
+  $('.sub-menu > li').on('activate', function() {
     var $a = $(this).find('> a');
     var page = $a.data('page');
     if(page) {
-      var $submenu = $('ul.sub-menu.' + page, 'div.sub-menu');
+      var $submenu = $(this).closest('div.sub-menu');
       $('div.page').removeClass('active');
       $('#' + page).addClass('active');   
       if($submenu.length) {
@@ -174,12 +195,6 @@ $(window).load(function() {
       } else {
         $('div.sub-menu').fadeOut();
       }
-    }
-    
-    if($a.data('order')) {
-      $('#order-link').show();
-    } else {
-      $('#order-link').hide(); 
     }
   })
 
@@ -312,19 +327,6 @@ $(window).load(function() {
       documentHeight = $(this).height();
     }
   }); 
-
-  $(window).scroll(
-    function() {
-      var offset = $('#tech').offset().top - $(window).scrollTop() - 45;
-      if(offset < 0) {
-        $('#tech-bg').css('top', -432);
-      } else if(offset > 864) {
-        $('#tech-bg').css('top', 432);
-      } else {
-        $('#tech-bg').css('top', -(432-offset));
-      }
-    }
-  )
 
   $(window).resize(function() {
     $('#contacts').height(Math.max($('#contacts .inner').outerHeight(true), $(window).height()));

@@ -161,7 +161,7 @@ ul.main-menu > li a {
     color: #808185;
 }
 
-ul.main-menu > li.active a {
+ul.main-menu > li.active > a {
     color: #FFFFFF;
 }
 
@@ -184,7 +184,6 @@ div.sub-menu div.wrapper {
 
 ul.sub-menu {
     height: 40px;
-    display: none;
 }
 
 ul.sub-menu li {
