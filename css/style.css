@@ -1037,14 +1037,12 @@ button.submited {
 
 #calendar .content {
     padding: 50px 0 50px;
-    border-left: 1px solid #949597;
-    border-right: 1px solid #949597;
-    width: 830px;
+    width: 834px;
 }
 
 .calendar {
     display: table;
-    width: 100%;
+    border-collapse: collapse;
 }
 
 .calendar .weekdays {
@@ -1057,23 +1055,107 @@ button.submited {
     text-transform: uppercase;
     font-size: 1em;
     padding: 5px 0;
-    border-bottom: 1px solid #949597;
-    border-top: 1px solid #949597;
-    border-right: 1px solid #949597;
+    border: 1px solid #949597;
     color: #949597;
-}
-
-.calendar .weekdays .day:last-child {
-    border-right: none;
 }
 
 .calendar .week {
     display: table-row;
-    height: 
+    height: 120px;
+    border-bottom: 1px solid #949597;
 }
 
 .calendar .week .day {
     display: table-cell;
+    border-left: 1px solid #949597;
+    border-right: 1px solid #949597;
+    position: relative;
+    box-sizing: border-box;
+    width: 119px;
+}
+
+.calendar .week .day.current {
+    background-color: #f2f2f2;
+}
+
+.calendar .week .day.inactive {
+    border-left: 1px solid #d7d9d8;
+    border-right: 1px solid #d7d9d8;
+}
+
+.calendar .week .day .day-name {
+    position: absolute;
+    top: 12px;
+    right: 9px;
+    color: #949597;
+}
+
+.calendar .week .day.current .day-name {
+    color: #222222;
+}
+
+.calendar .week .day.inactive .day-name {
+    color: #d7d9d8;
+}
+
+.calendar .week .day .event {
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    left: -1px;
+    bottom: -1px;
+    height: 34px;
+}
+
+.calendar .week .day .event.days2 {
+    width: 239px;
+}
+
+.calendar .week .day .event.days3 {
+    width: 358px;
+}
+
+.calendar .week .day .event.days4 {
+    width: 477px;
+}
+
+.calendar .week .day .event.days5 {
+    width: 596px;
+}
+
+.calendar .week .day .event.days6 {
+    width: 715px;
+}
+
+.calendar .week .day .event.days7 {
+    width: 834px;
+}
+
+.calendar .week .day .event.level1 {
+    bottom: 33px;
+}
+
+.calendar .week .day .event.level2 {
+    bottom: 66px;
+}
+
+.calendar .week .day .event.orange {
+    background-color: #f7941d;
+}
+
+.calendar .week .day .event.green {
+    background-color: #00a652;
+}
+
+.calendar .week .day .event.red {
+    background-color: red;
+}
+
+.calendar .week .day .event a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    line-height: 34px;
+    font-size: .9em;
 }
 
 .page .header {
