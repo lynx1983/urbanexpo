@@ -130,12 +130,12 @@ $(window).load(function() {
     function(event) {
       var page = $(this).data('page');
       if(page) {
-        var $submenu = $(this).closest('li').find('ul.sub-menu');
-        var $parentMenu = $(this).closest('li').closest('ul.menu li');
+        var haveSubmenu = $(this).closest('li').find('ul.sub-menu').length > 0;
+        var inSubmenu = $(this).closest('ul.menu').is('.sub-menu');
         var topOffset = $('#' + page).position().top;
         $('body').scrollspy('disable');
         scrollingComplite = false;     
-        $('html, body').animate({'scrollTop': topOffset - ($submenu.length || $parentMenu.length ? 86 : 45)}, 
+        $('html, body').animate({'scrollTop': topOffset - (haveSubmenu || inSubmenu ? 90 : 45)}, 
           {
             duration: 500, 
             complete: $.proxy(function() {
@@ -156,45 +156,37 @@ $(window).load(function() {
     }
   );
 
-  $('.main-menu > li').on('activate', function() {
+  $('.main-menu li').on('activate', function(event) {
     var $a = $(this).find('> a');
-    var page = $a.data('page');
-    $(this).addClass("active")
-    if(page) {
-      var $submenu = $(this).find('div.sub-menu');
-      $('div.page').removeClass('active');
-      $('#' + page).addClass('active');   
-      if($submenu.length) {
-        $submenu.slideDown();
-        if(!$submenu.is(':visible')) {
-          $('ul.sub-menu:visible').hide();
-          $submenu.fadeIn();
-        }
-      } else {
-        $('div.sub-menu').fadeOut();
-      }
-    }
-  })
+    var $menu = $(this).closest('ul.menu');
+    var $menuContainer = $menu.closest('div');
 
-  $('.sub-menu > li').on('activate', function() {
-    var $a = $(this).find('> a');
-    var page = $a.data('page');
-    if(page) {
-      var $submenu = $(this).closest('div.sub-menu');
-      $('div.page').removeClass('active');
-      $('#' + page).addClass('active');   
-      if($submenu.length) {
-        $('div.sub-menu').slideDown();
-        if(!$submenu.is(':visible')) {
-          $('ul.sub-menu:visible').hide();
-          $submenu.fadeIn();
+    if($(this).is($(event.target))) {
+      var page = $a.data('page');
+      if(page) {
+        console.log("Activate menu [" + $a.text() + "] with page [" + page + "]");
+        $('div.page').removeClass('active');
+        $('#' + page).addClass('active');
+        if($menu.is('.sub-menu')) {
+          console.log("Is sub menu item");
+          if(!$menuContainer.is(':visible')) {
+            $('div.sub-menu:visible').hide();
+            $menuContainer.slideDown();  
+          }
+        } else {
+          console.log("Is main menu item");
+          $('div.sub-menu:visible').hide();
+          var $submenu = $(this).find('div.sub-menu');
+          if($submenu.length) {
+            console.log("Have sub menu");
+            $submenu.slideDown();
+          }
         }
-        if($submenu.find('.active').length == 0) {
-          $submenu.find('li').eq(0).addClass('active');
-        }
-      } else {
-        $('div.sub-menu').fadeOut();
       }
+    } else {
+      console.log("Activate parent menu [" + $a.text() + "]");
+      $menu.find('> li').removeClass('active')
+      $(this).addClass('active')
     }
   })
 
@@ -251,7 +243,7 @@ $(window).load(function() {
   $('#logo').click(
     function() {
       $('.main-menu li').removeClass('active');
-      $('div.sub-menu ul').hide();
+      $('div.sub-menu').hide();
       $('html, body').animate({'scrollTop': 0}, 500);
     }
   );
@@ -288,7 +280,7 @@ $(window).load(function() {
 
   $('body').scrollspy({
     target: 'div.main-menu',
-    offset: 95
+    offset: 100
   });
 
   $('#portfolio .item .more').click(
