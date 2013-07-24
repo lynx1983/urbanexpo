@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.isotope.js"></script>
+	<script type="text/javascript" src="js/bootstrap-scrollspy.js"></script>
+	<script type="text/javascript" src="js/lib.js"></script>
+	<script type="text/javascript" src="js/contacts.js"></script>
+	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+</head>
+<body>
+	<header class="fixed">
+		<div class="header">
+			<div class="wrapper">
+				<div class="logo">
+					<a id="logo" href="#"><img src="img/logo.png"/></a>
+				</div>
+				<div class="main-menu">
+					<ul class="menu main-menu nav">
+						<li><a href="index.html">О компании</a></li>
+						<li><a href="tech.html">Технологии</a></li>
+						<li><a href="portfolio.html">Портфолио</a></li>
+						<li><a href="calendar.html">Календарь</a></li>
+						<li><a href="service.html">Услуги</a></li>
+						<li><a href="contacts.html" class="active">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="content">
+		<div id="contacts" class="page wrapper clearfix">
+			<div class="wrapper">
+				<div class="inner">
+					<div class="header">
+						<div class="header-wrapper">
+							<h2>Контакты</h2>
+						</div>
+					</div>
+					<div class="content">
+						<p>+7 (495) 971-83-85</p>
+						<p><a href="#">info@art-urban.ru</a></p>
+						<p>127051, Москва,<br/>Трубная, 32, корп. 3</p>
+					</div>
+					<div>
+						<a href="#" id="show-map">Посмотреть карту</a>
+						<a href="#" id="show-contacts">Контакты</a>
+					</div>
+					<div class="header">
+						<div class="header-wrapper">
+							<h2>Обратная связь</h2>
+						</div>
+					</div>
+					<div class="content">
+						<form method="post">
+							<div class="row clearfix">
+								<label class="required">Тема сообщения</label>
+								<input type="text" name="subject" />
+							</div>
+							<div class="row clearfix">
+								<div class="col3">
+									<label class="required">Имя</label>
+									<input type="text" name="name" />
+								</div>
+								<div class="col3">
+									<label>Компания</label>
+									<input type="text" name="company" />
+								</div>
+								<div class="col3">
+									<label>Должность</label>
+									<input type="text" name="state" />
+								</div>
+							</div>
+							<div class="row clearfix">
+								<div class="col2">
+									<label class="required">E-mail</label>
+									<input type="text" name="email" />
+								</div>
+								<div class="col2">
+									<label>Телефон</label>
+									<input type="text" name="phone" />
+								</div>
+							</div>
+							<div class="row clearfix">
+								<label class="required">Сообщение</label>
+								<textarea name="body"></textarea>
+							</div>
+							<div class="row clearfix">
+								<button class="right">Отправить</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="map"></div>
+		</div>
+	</div>
+</body>
+</html>

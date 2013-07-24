@@ -60,7 +60,6 @@ var $portfolio;
 var $news;
 var $equipment;
 var documentHeight;
-var map;
 var scrollingComplite;
 
 function showOverlay() {
@@ -74,26 +73,6 @@ function hideOverlay() {
 }
 
 $(window).load(function() {
-  $('#contacts').height(Math.max($('#contacts .inner').outerHeight(true), $(window).height()));
-
-  if(typeof ymaps != "undefined" && ymaps.Map) {
-    map = new ymaps.Map ("map", {
-      center: [55.771829, 37.629828], 
-      zoom: 17
-    });
-
-    map.controls
-      .add('zoomControl')
-      .add('typeSelector')
-      .add('mapTools')
-      .add('trafficControl');
-
-    map.geoObjects.add(
-      new ymaps.Placemark([55.771829, 37.625828], {
-        balloonContent: 'Искать здесь!'
-    }));
-  }
-
   $portfolio = $('#portfolio .isotope-wrapper');
   $news = $('#news .isotope-wrapper');
   $equipment = $('div.equipment');
@@ -326,8 +305,8 @@ $(window).load(function() {
     }
   }); 
 
-  $(window).resize(function() {
+  /*$(window).resize(function() {
     $('#contacts').height(Math.max($('#contacts .inner').outerHeight(true), $(window).height()));
     map.container.fitToViewport();
-  }); 
+  }); */
 })

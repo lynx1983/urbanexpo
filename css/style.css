@@ -208,7 +208,7 @@ ul.sub-menu li.active a {
 }
 
 header.fixed + #content {
-    padding-top: 45px;
+    padding-top: 90px;
 }
 
 #content .isotope-wrapper {
@@ -279,7 +279,6 @@ div.item .footer .links .more:hover {
 
 #about,
 #portfolio {
-    padding-top: 48px;
 }
 
 div.item.portfolio {
@@ -667,6 +666,7 @@ li.person:hover .mask {
     margin-left: 345px;
     padding: 25px 0 40px;
     max-width: 1280px;
+    width: auto;
 }
 
 #contacts form {
