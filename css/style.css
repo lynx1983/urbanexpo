@@ -1232,38 +1232,73 @@ button.submited {
 
 }
 
+#vacancy-form label {
+
+}
+
 #vacancy-form input {
     margin: 0;
     padding: 20px 15px;
+    border: none;
+    width: auto;
 }
 
 #vacancy-form .row {
     margin: 0;
     display: table;
     width: 100%;
+    border-collapse: collapse;
+}
+
+#vacancy-form .row label {
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    width: 1%;
 }
 
 #vacancy-form .row input {
-    border-top: none;
-    border-right: none;
+    outline: none;
 }
 
-#vacancy-form .row:first-of-type {
-    border-top: 1px solid #919395;
+#vacancy-form .row label input {
+    border: none;
 }
 
-#vacancy-form .col2,
-#vacancy-form .col3 {
-    padding: 0;
-    float: none;
+#vacancy-form .row .group {
+    display: table;
+    width: 100%;
+}
+
+#vacancy-form .row .group label {
     display: table-cell;
 }
 
-#vacancy-form .col3:last-child input,
-#vacancy-form .col2:last-child input {
-    border-right: 1px solid #919395;
+#vacancy-form .row .group input {
+    display: table-cell;
+    width: 100%;
 }
 
+#vacancy-form input[type=button] {
+    width: 100%;
+    background: transparent;
+}
+
+#vacancy-form input[type=file] {
+    padding: 0;
+}
+
+#vacancy-form .col {
+    padding: 0;
+    float: none;
+    display: table-cell;
+    border: 1px solid #949597;
+    border-bottom: none;
+}
+
+#vacancy-form .row:last-child .col {
+    border: 1px solid #949597;
+}
 
 @media screen and (max-width: 800px) {
     header .wrapper {

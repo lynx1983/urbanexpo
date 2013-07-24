@@ -132,23 +132,60 @@
 			<div class="content">
 				<p>Компания Урбан Групп основана в 2005 году как агентство корпоративного маркетинга. В 2006 вышло на рынок с услугами Брендинга и айдентики, а также общедизайнерских услуг. С 2007 года, агентство дополнил отдел по проведению BTL и Event. С 2011 функционирует как агентство полного цикла с дополнительными направлениями SMM и SMO услуг.</p>
 				<form id="vacancy-form">
-					<div class="row cle">
-						<div class="col3">
-							<input name="surname" placeholder="Фамилия" />
+					<div class="row">
+						<div class="col col3">
+							<div class="group">
+								<label>Фамилия</label>
+								<input name="surname" />
+							</div>
 						</div>
-						<div class="col3">
-							<input name="name" placeholder="Имя" />
+						<div class="col col3">
+							<div class="group">
+								<label>Имя</label>
+								<input name="name" />
+							</div>
 						</div>
-						<div class="col3">
-							<input name="lastname" placeholder="Отчество" />
+						<div class="col col3">
+							<div class="group">
+								<label>Отчество</label>
+								<input name="lastname" />
+							</div>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col2">
-							<input name="phone" placeholder="Телефон" />
+						<div class="col col2">
+							<div class="group">
+								<label>Телефон</label>
+								<input name="phone" />
+							</div>
 						</div>
-						<div class="col2">
-							<input name="email" placeholder="Email" />
+						<div class="col col2">
+							<div class="group">
+								<label>Email</label>
+								<input name="email" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="group">
+								<label style="width:auto;">Отправить резюме и/или портфолио</label>
+								<input type="file" placeholder="123" />
+							</div>
+						</div>
+						<div class="col" style="width: 100px;">
+							<input type="button" value="" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="col" style="width: 100px;">
+							<div class="group">
+								<label>6x7=</label>
+								<input name="captcha" maxlength="3" />
+							</div>	
+						</div>
+						<div class="col">
+							<input type="button" value="Отправить" />
 						</div>
 					</div>
 				</form>
