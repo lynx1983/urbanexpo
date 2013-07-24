@@ -104,8 +104,8 @@ header .wrapper {
 }
 
 div.logo {
-    float: left;
-    margin-left: 30px;
+    position: absolute;
+    margin-left: -130px;
 }
 
 #logo {
@@ -115,7 +115,6 @@ div.logo {
 
 div.main-menu {
     height: 100%;
-    margin-left: 150px;
 }
 
 ul.main-menu {
@@ -131,6 +130,10 @@ ul.main-menu > li {
     -moz-box-sizing: border-box;
     background: #231f20 url('../img/menu-bg.png') no-repeat 100% 0;
     z-index: 1;
+}
+
+ul.main-menu > li:first-child {
+    padding-left: 0;
 }
 
 ul.main-menu > li:last-child {
@@ -184,6 +187,8 @@ div.sub-menu div.wrapper {
 
 ul.sub-menu {
     height: 40px;
+    width: 760px;
+    margin: 0 auto;
 }
 
 ul.sub-menu li {
@@ -1157,7 +1162,7 @@ button.submited {
 }
 
 .page .header a {
-    width: 1024px;
+    width: 760px;
     margin: 0 auto;
     display: block;
 }
@@ -1181,8 +1186,12 @@ button.submited {
 
 .page .content {
     padding: 30px 0 10px;
-    width: 1024px;
+    width: 760px;
     margin: 0 auto;
+}
+
+.content strong {
+    font-weight: bold;
 }
 
 .content p {
@@ -1258,11 +1267,7 @@ button.submited {
 
 @media screen and (max-width: 800px) {
     header .wrapper {
-        width: 1024px;
-    }
-
-    div.logo {
-        margin-left: 30px;
+        width: 760px;
     }
 
     ul.main-menu li {
@@ -1272,15 +1277,7 @@ button.submited {
 
 @media screen and (min-width: 1024px) {
     header .wrapper {
-        width: 1024px;
-    }
-
-    div.logo {
-        margin-left: 30px;
-    }
-
-    div.main-menu {
-        margin-left: 200px;
+        width: 760px;
     }
 
     article .header-wrapper {
@@ -1290,15 +1287,7 @@ button.submited {
 
 @media screen and (min-width: 1280px) {
     header .wrapper {
-        width: 1280px;
-    }
-
-    div.logo {
-        margin-left: 150px;
-    }
-
-    div.main-menu {
-        margin-left: 330px;
+        width: 760px;
     }
 
     article .header-wrapper {
