@@ -203,28 +203,6 @@ $(window).load(function() {
     }
   );
 
-  $('#show-map').click(
-    function() {
-      $('#contacts .wrapper').animate({'left': '-60%'}, 500);
-      $('#map').animate({'left': '20%'}, 500);
-      map.panTo([55.771829, 37.625828]);
-      $('#show-map').hide();
-      $('#show-contacts').show();
-      return false;
-    }
-  );
-
-  $('#show-contacts').click(
-    function() {
-      $('#contacts .wrapper').animate({'left': '0'}, 500);
-      $('#map').animate({'left': '80%'}, 500);
-      map.panTo([55.771829, 37.629828]);
-      $('#show-contacts').hide();
-      $('#show-map').show();
-      return false;
-    }
-  );
-
   $('#logo').click(
     function() {
       $('.main-menu li').removeClass('active');

@@ -277,10 +277,6 @@ div.item .footer .links .more:hover {
     text-decoration: underline;
 }
 
-#about,
-#portfolio {
-}
-
 div.item.portfolio {
     width: 548px;
 }
@@ -325,33 +321,21 @@ div.item.portfolio img.item-image {
     padding-top: 40px;
 }
 
-#about .video-wrapper {
-    max-height: 540px;
-    overflow: hidden;
-    margin-bottom: 40px;
-    position: relative;
+#about {
+
 }
 
-#about video {
-    width: 100%;
+#about-team {
+    margin-bottom: 0;
 }
 
-#about .video-wrapper.closed {
-    height: 100px;
+#about-team .header {
+    margin-bottom: 0;
 }
 
-#about .video-wrapper .close {
-    position: absolute;
-    bottom: 0;
-    width: 46px;
-    height: 24px;
-    left: 170px;
-    background: #FFFFFF url('../img/slideup-bg.png') no-repeat 50% 5px;
-    cursor: pointer;    
-}
-
-#about .video-wrapper.closed .close {
-    background: #FFFFFF url('../img/slidedown-bg.png') no-repeat 50% 5px;
+#about-team .content {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 article {
@@ -504,9 +488,16 @@ section .content {
 }
 
 .person-card {
-    margin-bottom: 45px;
     width: 525px;
-    border: 1px solid #CCCCCC;    
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    padding-top: 30px;
+    padding-bottom: 130px;
+    margin-bottom: -34px;
+}
+
+.person-card .spacer.top {
+    height: 30px;
 }
 
 .foto-wrapper {
@@ -519,7 +510,8 @@ section .content {
 }
 
 .person-details {
-    margin-left: 225px;
+    padding-left: 225px;
+    border-top: 1px solid #CCCCCC;
 }
 
 .person-details .person-title {
@@ -530,7 +522,7 @@ section .content {
 
 .person-details .description {
     padding: 30px;
-    font-size: .8em;
+    font-size: 1em;
     border-left: 1px solid #CCCCCC;
 }
 
@@ -554,6 +546,7 @@ section .content {
 .person-card .cards {
     padding-top: 30px;
     border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
 }
 
 ul.persons {
